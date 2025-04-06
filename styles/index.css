@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Fredoka';
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 100 900;
+    src: url('../assets/font/Fredoka-VariableFont_wdth,wght.ttf') format('truetype'); /* Correct the path */
+}
+
+#nav {
+    background-color: #000000;
+    width: 100%;
+    height: 60px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fdfce9; 
+    background-image: url('../assets/background/tech-bg.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden; /* Prevent scrolling */
+    height: 100vh; /* Full viewport height */
+    font-family: 'Fredoka', sans-serif; /* Apply Fredoka font */
+}
+
+#bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; 
+    background-color: #000000; 
+    color: white; 
+    text-align: center;
+    line-height: 50px; 
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+#image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+    position: absolute; 
+    top: 180px; /* Use CSS variable for top position */
+   right: 160px; /* Use CSS variable for right position */ 
+}
+
+#image-container img {
+    width: 700px; 
+    height: 1000; 
+   
+    object-fit: contain; 
+}
+
+.intro-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Add spacing above the image */
+}
+
+.intro-image img {
+    width: 80%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.enter-page {
+    display: flex;
+    text-align: center;
+    position: absolute;
+    top:365px; /* Adjusted to place below the box */
+    left: 280px; /* Centered relative to the box */
+    font-size: 12px;
+    background-color: #000000;
+    color: rgb(252, 252, 252);
+    padding: 15px 50px;
+    border: none;
+    border-radius: 150px;
+    cursor: pointer;
+    margin-top: 0; /* Removed extra margin */
+}
+
+.highlight-box {
+    background-color: #fdfce9; /* Light background color */
+    padding: 20px;
+    border-radius: 35px; /* Increased curve for the box */
+    text-align: center;
+    position: absolute;
+    top: 280px;
+    left: 200px;
+    width: 700px; /* Keep the given width */
+    height: 350px; /* Keep the given height */
+    box-sizing: border-box; /* Include padding in width */
+    max-width: 700px; /* Limit maximum width */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.highlight-box .intro-title {
+    font-family: 'Fredoka', sans-serif; /* Changed to Fredoka font */
+    font-size: 28px; /* Adjust font size to fit */
+    margin-bottom: 15px; /* Adjust spacing below the title */
+    margin-top: 0; /* Remove extra margin to center properly */
+}
+
+.highlight-box .intro-text {
+    font-family: 'Fredoka', sans-serif; /* Changed to Fredoka font */
+    font-size: 10px; /* Adjust font size to fit */
+    word-wrap: break-word; /* Ensure text wraps properly */
+    overflow: hidden; /* Prevent overflow outside the box */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+}
