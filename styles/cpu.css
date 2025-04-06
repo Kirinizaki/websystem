@@ -65,8 +65,9 @@
 
 .cpu-parts {
     display: flex;
-    align-items: flex-start;
-    margin-top: 20px; /* Position below the previous content */
+    align-items: center; /* Center text vertically relative to the image */
+    margin-top: 0; /* Remove extra margin */
+    margin-left: 90px;
     gap: 2px; /* Add spacing between the text and the image */
 }
 
@@ -77,7 +78,7 @@
 }
 
 .cpu-parts-image img {
-    width: 800px; /* Match the size of cpu-image */
+    width: 700px; /* Match the size of cpu-image */
     height: auto;
     object-fit: contain;
 }
@@ -86,7 +87,7 @@
     flex: 2; /* Allow the text to take up more space */
     display: flex;
     flex-direction: column; /* Stack title and description vertically */
-    justify-content: space-evenly; /* Adjust specific spacing for text */
+    justify-content: center; /* Center text vertically within its container */
     height: 100%;
     margin-top: 0; /* Remove extra margin below */
     margin-left: 50px; /* Reduce spacing from the left */
@@ -105,4 +106,13 @@
     color: #000000;
     line-height: 1.6; /* Improve readability */
     max-width: 1000px; /* Limit width for better text alignment */
+}
+
+.parts-list {
+    font-family: 'Fredoka', sans-serif; /* Ensure consistent font */
+    font-size: 30px; /* Adjust font size for readability */
+    line-height: 1.8; /* Improve spacing between list items */
+    color: #000000; /* Ensure text is clearly visible */
+    margin: 0; /* Remove unnecessary margins */
+    padding: 0; /* Remove unnecessary padding */
 }
