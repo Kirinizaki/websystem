@@ -1,0 +1,51 @@
+.gpu-title {
+    text-align: center;
+    margin: 80px auto; /* Centered the box horizontally */
+    background-color: #000; /* Black background for the title box */
+    color:  #fdfce9; /* White text for contrast */
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 40%; /* Reduced width to make the box shorter */
+}
+
+.gpu-title h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.gpu-brands {
+    display: flex;
+    justify-content: space-around;
+    margin: 150px 20px; /* Increased top margin to lower the boxes */
+}
+
+.gpu-brands div {
+    width: 25%; /* Reduced width to make the boxes smaller */
+    text-align: center;
+    background-color: #000; /* Changed to black */
+    border: 1px solid #333; /* Adjusted border color for subtle contrast */
+    border-radius: 15px;
+    padding: 10px; /* Reduced padding for smaller boxes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Darker shadow for black boxes */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gpu-brands div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); /* Slightly stronger shadow on hover */
+}
+
+.gpu-brands img {
+    max-width: 70%; /* Reduced image size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.gpu-brands p {
+    font-family: 'Fredoka', sans-serif; /* Ensure Fredoka is applied to descriptions */
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #fff; /* Changed to white for better contrast */
+    line-height: 1.4; /* Adjusted line height for smaller text */
+}

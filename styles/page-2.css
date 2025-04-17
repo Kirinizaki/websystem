@@ -1,28 +1,21 @@
-@font-face {
-    font-family: 'Fredoka';
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 100 900;
-    src: url('../assets/font/Fredoka-VariableFont_wdth,wght.ttf') format('truetype'); /* Correct the path */
-}
-
 .page2-title {
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-family: 'Fredoka', sans-serif; /* Ensure the font is applied */
-    font-size: 24px; /* Adjust font size to fit within the box */
+    font-family: 'Teko', sans-serif; /* Change font to Teko */
+    font-size: 28px; /* Adjust font size to fit within the box */
     background-color: #000000; /* Add background box */
-    color: #fffff6; /* Change font color */
-    padding: 15px; /* Adjust padding for better spacing */
+    color: #fdfce9; /* Change font color */
+    padding: 5px 20px; /* Reduce top and bottom padding to make the box thinner */
     border-radius: 15px; /* Add rounded corners */
-    height: 150px; /* Set height for the title box */
-    width: 400px;
+    height: 100px; /* Adjust height to fit content */
+    width: 600px; /* Adjust width to fit content */
     position: absolute; /* Position the box */
-    top: 80px; /* Adjust vertical position to avoid overlapping with nav */
+    top: 140px; /* Adjust vertical position to avoid overlapping with nav */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for centering */
+    white-space: nowrap; /* Ensure the title stays in one line */
 }
 
 .pc-part {
@@ -31,13 +24,12 @@
     gap: 25px; /* Increase spacing between boxes for uniformity */
     justify-items: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
-    margin-top: 230px; /* Slightly lower the content boxes */
-    margin-bottom: 100px; /* Add spacing to avoid overlapping with bottom nav */
+    margin-top: 290px; /* Increase margin-top to lower the parts list */
 }
 
 .parts-list {
-    width: 250px; /* Slightly smaller box size */
-    height: 250px; /* Slightly smaller box size */
+    width: 220px; /* Slightly smaller box size */
+    height: 220px; /* Slightly smaller box size */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,6 +47,11 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
+.parts-list:hover {
+    transform: scale(1.1); /* Slightly enlarge the box on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
 .parts-list img {
     width: 120%; /* Adjust image size relative to the smaller box */
     height: auto;
@@ -66,7 +63,7 @@
     font-size: 16px; /* Slightly larger text for better readability */
     font-weight: 600;
     margin-top: 10px;
-    color: #fffff6;
+    color: #fdfce9;
     opacity: 1; /* Ensure text is always visible */
     transition: none; /* Disable hover transition effects */
     position: absolute; /* Position text over the image */

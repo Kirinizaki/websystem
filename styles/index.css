@@ -6,6 +6,20 @@
     src: url('../assets/font/Fredoka-VariableFont_wdth,wght.ttf') format('truetype'); /* Correct the path */
 }
 
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400 700;
+    src: url('../assets/font/Orbitron-VariableFont_wght.ttf') format('truetype'); /* Add Orbitron font */
+}
+
+@font-face {
+    font-family: 'Teko';
+    font-style: normal;
+    font-weight: 300 700;
+    src: url('../assets/font/Teko-VariableFont_wght.ttf') format('truetype'); /* Add Teko font */
+}
+
 #nav {
     background-color: #000000;
     width: 100%;

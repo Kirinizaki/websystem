@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center; /* Center the boxes horizontally */
     align-items: center; /* Center vertically */
-    gap: 400px; /* Reduce spacing between the boxes */
+    gap: 250px; /* Reduce spacing between the boxes */
     height: calc(100vh - 300px); /* Adjust height to center within the viewport */
     margin-top: -30px; /* Lower the position of the boxes */
 }
@@ -34,27 +34,27 @@
 
 .cpu-brands p {
     font-family: 'Fredoka', sans-serif; /* Apply consistent font */
-    font-size: 20px; /* Decrease font size */
-    color: #fdfce9; /* Set text color */
+    font-size: 16px; /* Decrease font size for smaller text */
+    color: #fffff6; /* Set text color */
     text-align: center;
     font-weight: bold; /* Make text bold */
-    line-height: 1.8; /* Improve readability */
+    line-height: 1.5; /* Adjust line height for readability */
     padding: 0 15px; /* Adjust padding for better text alignment */
-    margin-top: 10px; /* Add spacing above the text */
+    margin-top: 5px; /* Reduce spacing above the text */
 }
 
 .cpu-title {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
     text-align: center;
-    font-family: 'Fredoka', sans-serif; /* Apply consistent font */
-    font-size: 28px; /* Decrease font size */
-    font-weight: bold; /* Make text bold */
-    color: #fdfce9; 
-    background-color: #000000; 
-    padding: 10px 20px; /* Reduce padding to make the box thinner */
-    border-radius: 150px; /* Keep rounded corners */
-    margin: 50px auto; /* Increase top margin by 10px to lower the title */
-    width: fit-content; /* Adjust width to fit content */
+    margin: 80px auto; /* Centered the box horizontally */
+    background-color: #000; /* Black background for the title box */
+    color:  #fdfce9; /* White text for contrast */
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 40%; /* Reduced width to make the box shorter */
+}
+
+.cpu-title h1 {
+    font-size: 2.5em;
+    margin: 0;
 }

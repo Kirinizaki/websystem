@@ -1,0 +1,65 @@
+.motherboard-brands {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    flex-wrap: wrap;
+    margin: 100px 0 40px 0; /* Increased top margin to lower the boxes */
+}
+
+.motherboard-brands .intel-mobo,
+.motherboard-brands .amd-mobo {
+    width: 350px;
+    background: #000000;
+    color: #fff;
+    border-radius: 16px;
+    border: 1px solid #222;
+    padding: 32px 24px 24px 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.motherboard-brands .intel-mobo:hover,
+.motherboard-brands .amd-mobo:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.motherboard-brands img {
+    max-width: 300px;
+    margin-bottom: 18px;
+    margin-top: 0;
+}
+
+.motherboard-brands h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.motherboard-brands p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.page-title {
+    text-align: center;
+    margin: 80px auto; /* Centered the box horizontally */
+    background-color: #000000; /* Black background for the title box */
+    color:  #fdfce9; /* White text for contrast */
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 40%; /* Reduced width to make the box shorter */
+}
+
+.page-title h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
