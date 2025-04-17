@@ -1,0 +1,66 @@
+.page-title {
+    text-align: center;
+    margin: 80px auto;
+    background-color: #000;
+    color: #fdfce9;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 40%;
+}
+
+.page-title h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.storage-brands {
+    display: flex;
+    justify-content: space-around;
+    margin: 150px 20px;
+    flex-wrap: wrap;
+}
+
+.storage-brands .storage-box {
+    width: 25%;
+    text-align: center;
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.storage-brands .storage-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+.storage-brands img {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.storage-brands h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    margin-top: 0;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.storage-brands p {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.9em;
+    color: #fff;
+    line-height: 1.4;
+    margin: 0;
+}
