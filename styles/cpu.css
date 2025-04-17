@@ -1,118 +1,60 @@
-@font-face {
-    font-family: 'Fredoka';
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 100 900;
-    src: url('../assets/font/Fredoka-VariableFont_wdth,wght.ttf') format('truetype'); /* Correct the path */
-}
-
-@font-face {
-    font-family: 'Abril Fatface';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../assets/font/AbrilFatface-Regular.ttf') format('truetype'); /* Add Abril Fatface font */
-}
-
-.page-title {
+.cpu-brands {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the boxes horizontally */
+    align-items: center; /* Center vertically */
+    gap: 400px; /* Reduce spacing between the boxes */
+    height: calc(100vh - 300px); /* Adjust height to center within the viewport */
+    margin-top: -30px; /* Lower the position of the boxes */
+}
+
+.cpu-brands .intel, .cpu-brands .amd {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    font-family: 'Fredoka', sans-serif; /* Ensure the font is applied */
-    font-size: 32px;
-    margin-top: 20px;
-    color: #000000;
+    justify-content: space-evenly; /* Ensure vertical alignment of content */
+    width: 450px; /* Slightly decrease box width */
+    height: 450px; /* Slightly decrease box height */
+    background-color: #000000;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.what-is-cpu {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px; /* Position below the title */
-    gap: 2px; /* Add spacing between the image and the text */
+.cpu-brands .intel:hover, .cpu-brands .amd:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
-.cpu-image {
-    flex: 1; /* Allow the image to take up space proportionally */
-}
-
-.cpu-image img {
-    width: 800px; /* Adjust image size */
+.cpu-brands img {
+    width: 180px; /* Slightly decrease image size */
     height: auto;
-    object-fit: contain;
+    margin-bottom: 15px; /* Adjust spacing below the image */
+    margin-top: 20px; /* Add spacing above the image */
 }
 
-.info-container {
-    flex: 2; /* Allow the text to take up more space */
-    display: flex;
-    flex-direction: column; /* Stack title and description vertically */
-    justify-content: flex-start;
-    margin-top: 30px; /* Slightly compress margin below */
+.cpu-brands p {
+    font-family: 'Fredoka', sans-serif; /* Apply consistent font */
+    font-size: 20px; /* Decrease font size */
+    color: #fdfce9; /* Set text color */
+    text-align: center;
+    font-weight: bold; /* Make text bold */
+    line-height: 1.8; /* Improve readability */
+    padding: 0 15px; /* Adjust padding for better text alignment */
+    margin-top: 10px; /* Add spacing above the text */
 }
 
 .cpu-title {
-    font-family: 'Abril Fatface', sans-serif; /* Apply Abril Fatface font */
-    font-size: 28px; /* Larger font size for the title */
-    color: #000000;
-}
-
-.cpu-description {
-    font-family: 'Fredoka', sans-serif; /* Apply Fredoka font */
-    font-size: 35px; /* Increased font size for better readability */
-    color: #000000;
-    line-height: 1.6; /* Improve readability */
-    max-width: 1000px; /* Limit width for better text alignment */
-}
-
-.cpu-parts {
     display: flex;
-    align-items: center; /* Center text vertically relative to the image */
-    margin-top: 0; /* Remove extra margin */
-    margin-left: 90px;
-    gap: 2px; /* Add spacing between the text and the image */
-}
-
-.cpu-parts-image {
-    flex: 1; /* Allow the image to take up space proportionally */
-    display: flex;
-    justify-content: flex-end; /* Align the image to the right */
-}
-
-.cpu-parts-image img {
-    width: 700px; /* Match the size of cpu-image */
-    height: auto;
-    object-fit: contain;
-}
-
-.info-container2 {
-    flex: 2; /* Allow the text to take up more space */
-    display: flex;
-    flex-direction: column; /* Stack title and description vertically */
-    justify-content: center; /* Center text vertically within its container */
-    height: 100%;
-    margin-top: 0; /* Remove extra margin below */
-    margin-left: 50px; /* Reduce spacing from the left */
-    gap: 10px; /* Maintain spacing between text elements */
-}
-
-.parts-title {
-    font-family: 'Abril Fatface', sans-serif; /* Apply Abril Fatface font */
-    font-size: 28px; /* Larger font size for the title */
-    color: #000000;
-}
-
-.parts {
-    font-family: 'Fredoka', sans-serif; /* Apply Fredoka font */
-    font-size: 35px; /* Increased font size for better readability */
-    color: #000000;
-    line-height: 1.6; /* Improve readability */
-    max-width: 1000px; /* Limit width for better text alignment */
-}
-
-.parts-list {
-    font-family: 'Fredoka', sans-serif; /* Ensure consistent font */
-    font-size: 30px; /* Adjust font size for readability */
-    line-height: 1.8; /* Improve spacing between list items */
-    color: #000000; /* Ensure text is clearly visible */
-    margin: 0; /* Remove unnecessary margins */
-    padding: 0; /* Remove unnecessary padding */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    font-family: 'Fredoka', sans-serif; /* Apply consistent font */
+    font-size: 28px; /* Decrease font size */
+    font-weight: bold; /* Make text bold */
+    color: #fdfce9; 
+    background-color: #000000; 
+    padding: 10px 20px; /* Reduce padding to make the box thinner */
+    border-radius: 150px; /* Keep rounded corners */
+    margin: 50px auto; /* Increase top margin by 10px to lower the title */
+    width: fit-content; /* Adjust width to fit content */
 }
