@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Storage List</title>
+    <link rel="stylesheet" href="../../../styles/index.css">
+    <link rel="stylesheet" href="../../../styles/cpu-intel/intel-cpu-list.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="page-title">
+        <h1>STORAGE DEVICES LIST</h1>
+    </div>
+    <div class="landing-page">
+        <div class="intel-sidebar">
+            <input type="radio" name="storage" value="nvme" id="nvme" checked>
+            <label for="nvme" class="button">NVMe SSD</label>
+            <input type="radio" name="storage" value="sata" id="sata">
+            <label for="sata" class="button">SATA SSD</label>
+            <input type="radio" name="storage" value="hdd" id="hdd">
+            <label for="hdd" class="button">HDD</label>
+        </div>
+        <div class="scrollable-content">
+            <div class="grid-container">
+                <!-- NVMe Items -->
+                <div class="grid-item" data-storage="nvme">
+                    <img src="../../../assets/storage/nvme/nvme1.png" alt="Samsung 980 Pro NVMe">
+                    <p>Samsung 980 Pro NVMe</p>
+                </div>
+                <div class="grid-item" data-storage="nvme">
+                    <img src="../../../assets/storage/nvme/nvme2.png" alt="WD Black SN850">
+                    <p>WD Black SN850</p>
+                </div>
+                <div class="grid-item" data-storage="nvme">
+                    <img src="../../../assets/storage/nvme/nvme3.png" alt="Crucial P5 Plus">
+                    <p>Crucial P5 Plus</p>
+                </div>
+                <!-- SATA Items -->
+                <div class="grid-item" data-storage="sata">
+                    <img src="../../../assets/storage/sata/sata1.png" alt="Samsung 870 EVO">
+                    <p>Samsung 870 EVO</p>
+                </div>
+                <div class="grid-item" data-storage="sata">
+                    <img src="../../../assets/storage/sata/sata2.png" alt="Crucial MX500">
+                    <p>Crucial MX500</p>
+                </div>
+                <div class="grid-item" data-storage="sata">
+                    <img src="../../../assets/storage/sata/sata3.png" alt="WD Blue 3D NAND">
+                    <p>WD Blue 3D NAND</p>
+                </div>
+                <!-- HDD Items -->
+                <div class="grid-item" data-storage="hdd">
+                    <img src="../../../assets/storage/hdd/hdd1.png" alt="Seagate Barracuda">
+                    <p>Seagate Barracuda</p>
+                </div>
+                <div class="grid-item" data-storage="hdd">
+                    <img src="../../../assets/storage/hdd/hdd2.png" alt="WD Blue HDD">
+                    <p>WD Blue HDD</p>
+                </div>
+                <div class="grid-item" data-storage="hdd">
+                    <img src="../../../assets/storage/hdd/hdd3.png" alt="Toshiba P300">
+                    <p>Toshiba P300</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-nav"></div>
+    <script>
+        document.querySelectorAll('input[name="storage"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedValue = document.querySelector('input[name="storage"]:checked').value;
+                document.querySelectorAll('.grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-storage') === selectedValue ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Get the query parameter from the URL
+        const params = new URLSearchParams(window.location.search);
+        const selectedStorage = params.get('storage');
+
+        // Set the corresponding radio button as checked
+        if (selectedStorage) {
+            const radio = document.getElementById(selectedStorage);
+            if (radio) {
+                radio.checked = true;
+                // Trigger the change event to update the content visibility
+                radio.dispatchEvent(new Event('change'));
+            }
+        } else {
+            // Show only NVMe by default
+            document.querySelectorAll('.grid-item').forEach(item => {
+                item.style.display = item.getAttribute('data-storage') === 'nvme' ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
