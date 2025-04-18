@@ -39,6 +39,11 @@ body {
     font-family: 'Fredoka', sans-serif; /* Apply Fredoka font */
 }
 
+img {
+    opacity: 1 !important; /* Ensure global image styles do not override local styles */
+    background-color: transparent; /* Reset any global background color */
+}
+
 #bottom-nav {
     position: fixed;
     bottom: 0;
