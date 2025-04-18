@@ -56,14 +56,14 @@
             </div>
         </div>
         <div class="scrollable-content">
-            <div class="nvidia-content">
+            <div class="grid-container">
+                <div class="nvidia-content">
                 nv
-            </div>
-            <div class="amd-content">
+                </div>
+                <div class="amd-content">
                 am
-            </div>
-            <div class="intel-content">
-                <div class="grid"></div>
+                </div>
+                <div class="intel-content">
                     <div class="grid-item" data-cpu="ARC-A500">Intel ARC A500 Series - Model 1</div>
                     <div class="grid-item" data-cpu="ARC-A500">Intel ARC A500 Series - Model 2</div>
                     <div class="grid-item" data-cpu="ARC-A700">Intel ARC A700 Series - Model 1</div>
@@ -86,7 +86,7 @@
                 });
 
                 // Toggle scrollable content visibility
-                document.querySelectorAll('.scrollable-content > div').forEach(content => {
+                document.querySelectorAll('.grid-container > div').forEach(content => {
                     content.style.display = content.classList.contains(`${selectedGpu.toLowerCase()}-content`) ? 'block' : 'none';
                 });
 
