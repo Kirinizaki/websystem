@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cooler List</title>
+    <link rel="stylesheet" href="../../../styles/index.css">
+    <link rel="stylesheet" href="../../../styles/cooler/cooler-list.css">
+    <style>
+        /* Make the sidebar buttons bigger */
+        .cooler-sidebar label.button {
+            width: 180px;
+            height: 70px;
+            font-size: 22px;
+        }
+        .cooler-sidebar input:checked + label.button {
+            width: 260px;
+        }
+    </style>
+</head>
+<body class="cooler-bg">
+    <div id="nav"></div>
+    <div class="page-title">
+        <h1>COOLER LIST</h1>
+    </div>
+    <div class="landing-page">
+        <div class="cooler-sidebar">
+            <input type="radio" name="cooler" value="air" id="air" checked>
+            <label for="air" class="button">Air Cooler</label>
+            <input type="radio" name="cooler" value="aio" id="aio">
+            <label for="aio" class="button">AIO</label>
+        </div>
+        <div class="scrollable-content">
+            <div class="grid-container">
+                <!-- Air Cooler Items (16 total) -->
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/nh-d15.png" alt="Noctua NH-D15">
+                    <p>Noctua NH-D15</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/bequiet-darkrock.png" alt="be quiet! Dark Rock Pro 4">
+                    <p>be quiet! Dark Rock Pro 4</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/deepcool-ak620.png" alt="DeepCool AK620">
+                    <p>DeepCool AK620</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/coolermaster-hyper212.png" alt="Cooler Master Hyper 212">
+                    <p>Cooler Master Hyper 212</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/arctic-freezer34.png" alt="Arctic Freezer 34">
+                    <p>Arctic Freezer 34</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/scythe-mugen5.png" alt="Scythe Mugen 5">
+                    <p>Scythe Mugen 5</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/thermalright-peerless.png" alt="Thermalright Peerless Assassin 120">
+                    <p>Thermalright Peerless Assassin 120</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/cryorig-h7.png" alt="Cryorig H7">
+                    <p>Cryorig H7</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/bequiet-pure-rock2.png" alt="be quiet! Pure Rock 2">
+                    <p>be quiet! Pure Rock 2</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/noctua-nh-u12s.png" alt="Noctua NH-U12S">
+                    <p>Noctua NH-U12S</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/coolermaster-tx3.png" alt="Cooler Master Hyper TX3">
+                    <p>Cooler Master Hyper TX3</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/arctic-freezer7x.png" alt="Arctic Freezer 7X">
+                    <p>Arctic Freezer 7X</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/thermalright-axp90.png" alt="Thermalright AXP-90">
+                    <p>Thermalright AXP-90</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/scythe-fuma2.png" alt="Scythe Fuma 2">
+                    <p>Scythe Fuma 2</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/noctua-nh-l9i.png" alt="Noctua NH-L9i">
+                    <p>Noctua NH-L9i</p>
+                </div>
+                <div class="grid-item" data-cooler="air">
+                    <img src="../../../assets/cooler/air/bequiet-shadow-rock3.png" alt="be quiet! Shadow Rock 3">
+                    <p>be quiet! Shadow Rock 3</p>
+                </div>
+
+                <!-- AIO Items (16 total) -->
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/kraken-x73.png" alt="NZXT Kraken X73">
+                    <p>NZXT Kraken X73</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/corsair-h150i.png" alt="Corsair iCUE H150i">
+                    <p>Corsair iCUE H150i</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/arctic-liquid-freezer-ii.png" alt="Arctic Liquid Freezer II 360">
+                    <p>Arctic Liquid Freezer II 360</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/ek-aio-360.png" alt="EK-AIO 360 D-RGB">
+                    <p>EK-AIO 360 D-RGB</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/msi-mag-coreliquid.png" alt="MSI MAG CoreLiquid 360R">
+                    <p>MSI MAG CoreLiquid 360R</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/coolermaster-ml360r.png" alt="Cooler Master ML360R">
+                    <p>Cooler Master ML360R</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/thermaltake-floe.png" alt="Thermaltake Floe DX 360">
+                    <p>Thermaltake Floe DX 360</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/evga-clc-360.png" alt="EVGA CLC 360">
+                    <p>EVGA CLC 360</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/asetek-645lt.png" alt="Asetek 645LT">
+                    <p>Asetek 645LT</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/alphacool-eisbaer.png" alt="Alphacool Eisbaer 360">
+                    <p>Alphacool Eisbaer 360</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/enermax-liqmax-iii.png" alt="Enermax Liqmax III 360">
+                    <p>Enermax Liqmax III 360</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/antec-mercury.png" alt="Antec Mercury 360">
+                    <p>Antec Mercury 360</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/fractal-celsius.png" alt="Fractal Celsius+ S36 Prisma">
+                    <p>Fractal Celsius+ S36 Prisma</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/raijintek-orcus.png" alt="Raijintek Orcus 360">
+                    <p>Raijintek Orcus 360</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/silverstone-pf360.png" alt="SilverStone PF360">
+                    <p>SilverStone PF360</p>
+                </div>
+                <div class="grid-item" data-cooler="aio">
+                    <img src="../../../assets/cooler/aio/id-cooling-zoomflow.png" alt="ID-COOLING ZOOMFLOW 360X">
+                    <p>ID-COOLING ZOOMFLOW 360X</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-nav"></div>
+    <script>
+        document.querySelectorAll('input[name="cooler"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedValue = document.querySelector('input[name="cooler"]:checked').value;
+                document.querySelectorAll('.grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-cooler') === selectedValue ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Get the query parameter from the URL
+        const params = new URLSearchParams(window.location.search);
+        const selectedCooler = params.get('cooler');
+
+        // Set the corresponding radio button as checked
+        if (selectedCooler) {
+            const radio = document.getElementById(selectedCooler);
+            if (radio) {
+                radio.checked = true;
+                // Trigger the change event to update the content visibility
+                radio.dispatchEvent(new Event('change'));
+            }
+        } else {
+            // Default to show only air coolers on load
+            document.querySelectorAll('.grid-item').forEach(item => {
+                item.style.display = item.getAttribute('data-cooler') === 'air' ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
