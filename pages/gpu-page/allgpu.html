@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Processing Unit</title>
+    <link rel="stylesheet" href="../../styles/index.css">
+    <link rel="stylesheet" href="../../styles/gpu/allgpu.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="page-title">
+        <div class="nvidia-title">
+            <h1>NVIDIA GRAPHICS CARD LIST</h1>
+        </div>
+        <div class="amd-title">
+            <h1>AMD GRAPHICS CARD LIST</h1>
+        </div>
+        <div class="intel-title">
+            <h1>INTEL GRAPHICS CARD LIST</h1>
+        </div>
+    </div>
+    <div class="landing-page">
+        <div class="allgpu-sidebar">
+            <input type="radio" name="gpu" value="Nvidia" id="Nvidia" checked>
+            <label for="Nvidia" class="button-1">Nvidia</label>
+            <input type="radio" name="gpu" value="AMD" id="AMD">
+            <label for="AMD" class="button-2">AMD</label>
+            <input type="radio" name="gpu" value="Intel" id="Intel">
+            <label for="Intel" class="button-3">Intel</label>        
+        </div>
+        <div class="topbars">
+            <div class="nvidia-topbar">
+                <input type="radio" name="nvidia-series" value="RTX-3000" id="RTX-3000" checked>
+                <label for="RTX-3000" class="button">RTX-3000</label>
+                <input type="radio" name="nvidia-series" value="RTX-4000" id="RTX-4000">
+                <label for="RTX-4000" class="button">RTX-4000</label>
+                <input type="radio" name="nvidia-series" value="GTX-1600" id="GTX-1600">
+                <label for="GTX-1600" class="button">GTX-1600</label>
+            </div>
+            <div class="amd-topbar">
+                <input type="radio" name="amd-series" value="RX-5000" id="RX-5000" checked>
+                <label for="RX-5000" class="button">RX-5000</label>
+                <input type="radio" name="amd-series" value="RX-6000" id="RX-6000">
+                <label for="RX-6000" class="button">RX-6000</label>
+                <input type="radio" name="amd-series" value="RX-7000" id="RX-7000">
+                <label for="RX-7000" class="button">RX-7000</label>
+            </div>
+            <div class="intel-topbar">
+                <input type="radio" name="intel-series" value="ARC-A500" id="ARC-A500" checked>
+                <label for="ARC-A500" class="button">ARC-A500</label>
+                <input type="radio" name="intel-series" value="ARC-A700" id="ARC-A700">
+                <label for="ARC-A700" class="button">ARC-A700</label>
+                <input type="radio" name="intel-series" value="ARC-A900" id="ARC-A900">
+                <label for="ARC-A900" class="button">ARC-A900</label>
+            </div>
+        </div>
+        <div class="scrollable-content">
+            <div class="nvidia-content">
+                nv
+            </div>
+            <div class="amd-content">
+                am
+            </div>
+            <div class="intel-content">
+                <div class="grid"></div>
+                    <div class="grid-item" data-cpu="ARC-A500">Intel ARC A500 Series - Model 1</div>
+                    <div class="grid-item" data-cpu="ARC-A500">Intel ARC A500 Series - Model 2</div>
+                    <div class="grid-item" data-cpu="ARC-A700">Intel ARC A700 Series - Model 1</div>
+                    <div class="grid-item" data-cpu="ARC-A700">Intel ARC A700 Series - Model 2</div>
+                    <div class="grid-item" data-cpu="ARC-A900">Intel ARC A900 Series - Model 1</div>
+                    <div class="grid-item" data-cpu="ARC-A900">Intel ARC A900 Series - Model 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-nav"></div>
+    <script>
+        document.querySelectorAll('input[name="gpu"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedGpu = document.querySelector('input[name="gpu"]:checked').value;
+
+                // Toggle topbars visibility
+                document.querySelectorAll('.topbars > div').forEach(topbar => {
+                    topbar.style.display = topbar.classList.contains(`${selectedGpu.toLowerCase()}-topbar`) ? 'block' : 'none';
+                });
+
+                // Toggle scrollable content visibility
+                document.querySelectorAll('.scrollable-content > div').forEach(content => {
+                    content.style.display = content.classList.contains(`${selectedGpu.toLowerCase()}-content`) ? 'block' : 'none';
+                });
+
+
+                document.querySelectorAll('.page-title > div').forEach(content => {
+                    content.style.display = content.classList.contains(`${selectedGpu.toLowerCase()}-title`) ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Initialize visibility based on the default checked GPU
+        document.querySelector('input[name="gpu"]:checked').dispatchEvent(new Event('change'));
+
+        document.querySelectorAll('input[name="cpu"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedValue = document.querySelector('input[name="cpu"]:checked').value;
+                document.querySelectorAll('.grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-cpu') === selectedValue ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Get the query parameter from the URL
+        const params = new URLSearchParams(window.location.search);
+        const selectedCpu = params.get('cpu');
+
+        // Set the corresponding radio button as checked
+        if (selectedCpu) {
+            const radio = document.getElementById(selectedCpu);
+            if (radio) {
+                radio.checked = true;
+                // Trigger the change event to update the content visibility
+                radio.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
+</body>
+</html>
