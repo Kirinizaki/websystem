@@ -95,4 +95,5 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #ED1C24;
     background-color: rgba(255, 0, 0, 0.1);
+    color: #ffffff;
 }
