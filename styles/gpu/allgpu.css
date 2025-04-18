@@ -36,7 +36,7 @@
     width: 150px;
     position: fixed;
     top: calc(50% + 40px);
-    left: 61px;
+    left: 41px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -50,25 +50,53 @@
     display: none;
 }
 
-.allgpu-sidebar label  {
+.allgpu-sidebar .button-1{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 50px;
+    width: 160px;
+    height: 70px;
     background-color: #76B900;
     color: #ffffff;
     font-family: 'Fredoka', sans-serif;
-    font-size: 16px;
-    border-radius: 15px;
+    font-size: 20px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.allgpu-sidebar .button-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 70px;
+    background-color: #ED1C24;
+    color: #ffffff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 20px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.allgpu-sidebar .button-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 70px;
+    background-color: #0074D9;
+    color: #ffffff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 20px;
+    border-radius: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .allgpu-sidebar input:checked + label {
-    width: 200px;
+    width: 240px;
     background-color: black;
-    border-radius: 15px 0 0 15px;
+    border-radius: 18px 0 0 18px;
 }
 
 .scrollable-content {
@@ -84,7 +112,7 @@
     display: none; /* Chrome, Safari */
 }
 
-.grid-container {
+.grid-container  {
     height: 600px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
