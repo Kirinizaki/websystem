@@ -97,7 +97,8 @@ body {
 }
 
 .highlight-box {
-    background-color: #fdfce9; /* Light background color */
+    background-color: #000000; /* Light background color */
+    color: #fdfce9; /* Set font color to pink */
     padding: 20px;
     border-radius: 35px; /* Increased curve for the box */
     text-align: center;
