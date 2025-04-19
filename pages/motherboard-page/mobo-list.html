@@ -3,7 +3,7 @@
 <head>
     <title>Motherboard List</title>
     <link rel="stylesheet" href="../../../styles/index.css">
-    <link rel="stylesheet" href="../../../styles/motherboard/motherboard-list.css">
+    <link rel="stylesheet" href="../../../styles/motherboard/mobo-list.css">
 </head>
 <body class="intel-bg">
     <div id="nav"></div>
@@ -64,7 +64,13 @@
 
         // --- State ---
         let selectedBrand = 'intel';
-        let selectedSeries = motherboardData[selectedBrand].series[0].id;
+        // Get series from URL query parameter if present
+        function getQueryParam(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+        let initialSeries = getQueryParam('series');
+        let selectedSeries = initialSeries || motherboardData[selectedBrand].series[0].id;
 
         // --- DOM Elements ---
         const seriesSidebar = document.querySelector('.series-sidebar');
@@ -80,7 +86,8 @@
                 input.name = 'series';
                 input.value = s.id;
                 input.id = s.id;
-                if (idx === 0) input.checked = true;
+                // Check if this is the selected series
+                input.checked = (selectedSeries === s.id) || (!initialSeries && idx === 0);
                 input.addEventListener('change', () => {
                     selectedSeries = s.id;
                     renderGrid();
@@ -113,7 +120,9 @@
 
         function setBrand(brand) {
             selectedBrand = brand;
-            selectedSeries = motherboardData[brand].series[0].id;
+            // If the current selectedSeries doesn't exist in the new brand, default to the first series
+            const availableSeries = motherboardData[brand].series.map(s => s.id);
+            selectedSeries = availableSeries.includes(selectedSeries) ? selectedSeries : motherboardData[brand].series[0].id;
             // Update active button
             document.querySelectorAll('.brand-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.getAttribute('data-brand') === brand);
