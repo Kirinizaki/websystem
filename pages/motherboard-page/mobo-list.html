@@ -63,12 +63,13 @@
         };
 
         // --- State ---
-        let selectedBrand = 'intel';
-        // Get series from URL query parameter if present
+        // Get brand and series from URL query parameters if present
         function getQueryParam(name) {
             const params = new URLSearchParams(window.location.search);
             return params.get(name);
         }
+        let initialBrand = getQueryParam('brand');
+        let selectedBrand = initialBrand === 'amd' ? 'amd' : 'intel';
         let initialSeries = getQueryParam('series');
         let selectedSeries = initialSeries || motherboardData[selectedBrand].series[0].id;
 
@@ -139,6 +140,10 @@
         });
 
         // --- Initial Render ---
+        // Ensure correct active tab on load
+        document.querySelectorAll('.brand-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-brand') === selectedBrand);
+        });
         renderSeriesSidebar();
         renderGrid();
     </script>
