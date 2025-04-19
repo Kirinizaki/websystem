@@ -265,8 +265,24 @@
             });
         });
 
-        // On load, show only checked type
+        // On load, show only checked type or type from URL
         window.addEventListener('DOMContentLoaded', () => {
+            // Get 'type' from query string (e.g., ?type=nvme)
+            const params = new URLSearchParams(window.location.search);
+            const typeParam = params.get('type');
+            let typeValue = null;
+            if (typeParam && ['nvme', 'sata', 'hdd'].includes(typeParam)) {
+                typeValue = typeParam;
+            }
+            if (typeValue) {
+                const radio = document.getElementById(typeValue + '-type');
+                if (radio) {
+                    radio.checked = true;
+                    radio.dispatchEvent(new Event('change'));
+                    return;
+                }
+            }
+            // Default: show checked
             const checked = document.querySelector('input[name="storage-type"]:checked');
             if (checked) checked.dispatchEvent(new Event('change'));
         });

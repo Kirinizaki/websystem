@@ -101,8 +101,28 @@
             });
         });
 
-        // On load, show only checked type
+        // On load, show only checked type or type from URL
         window.addEventListener('DOMContentLoaded', () => {
+            // Get 'type' from query string (e.g., ?type=atx)
+            const params = new URLSearchParams(window.location.search);
+            const typeParam = params.get('type');
+            let typeValue = null;
+            if (typeParam && ['atx', 'm-atx', 'm-itx'].includes(typeParam)) {
+                typeValue = typeParam;
+            }
+            if (typeValue) {
+                let radioId = '';
+                if (typeValue === 'atx') radioId = 'atx-type';
+                else if (typeValue === 'm-atx') radioId = 'matx-type';
+                else if (typeValue === 'm-itx') radioId = 'mitx-type';
+                const radio = document.getElementById(radioId);
+                if (radio) {
+                    radio.checked = true;
+                    radio.dispatchEvent(new Event('change'));
+                    return;
+                }
+            }
+            // Default: show checked
             const checked = document.querySelector('input[name="case-type"]:checked');
             if (checked) checked.dispatchEvent(new Event('change'));
         });
