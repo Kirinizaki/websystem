@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RAM List</title>
+    <link rel="stylesheet" href="../../../styles/index.css">
+    <link rel="stylesheet" href="../../../styles/ram/ram-list.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="ram-page-title">
+        <h1>RAM LIST</h1>
+    </div>
+    <div class="ram-landing-page">
+        <div class="ram-topbar" style="margin-bottom:0;padding-bottom:0;">
+            <div class="ram-type-group">
+                <input type="radio" name="ram-type" value="ddr4" id="ddr4-type" class="ram-type-radio" checked>
+                <label for="ddr4-type" class="ram-type-label">DDR4</label>
+                <input type="radio" name="ram-type" value="ddr5" id="ddr5-type" class="ram-type-radio">
+                <label for="ddr5-type" class="ram-type-label">DDR5</label>
+            </div>
+        </div>
+        <div class="ram-scrollable-content" style="margin-top:0;padding-top:0;padding-bottom:60px;">
+            <div class="ram-grid-container">
+                <!-- DDR4 Items -->
+                <div class="ram-grid-item" data-type="ddr4">
+                    <img src="../../../assets/ram/ddr4/ddr4-1.png" alt="DDR4 RAM 1">
+                    <p>DDR4 RAM 1</p>
+                </div>
+                <div class="ram-grid-item" data-type="ddr4">
+                    <img src="../../../assets/ram/ddr4/ddr4-2.png" alt="DDR4 RAM 2">
+                    <p>DDR4 RAM 2</p>
+                </div>
+                <div class="ram-grid-item" data-type="ddr4">
+                    <img src="../../../assets/ram/ddr4/ddr4-3.png" alt="DDR4 RAM 3">
+                    <p>DDR4 RAM 3</p>
+                </div>
+                <div class="ram-grid-item" data-type="ddr4">
+                    <img src="../../../assets/ram/ddr4/ddr4-4.png" alt="DDR4 RAM 4">
+                    <p>DDR4 RAM 4</p>
+                </div>
+                <div class="ram-grid-item" data-type="ddr4">
+                    <img src="../../../assets/ram/ddr4/ddr4-5.png" alt="DDR4 RAM 5">
+                    <p>DDR4 RAM 5</p>
+                </div>
+                <!-- DDR5 Items -->
+                <div class="ram-grid-item" data-type="ddr5">
+                    <img src="../../../assets/ram/ddr5/ddr5-1.png" alt="DDR5 RAM 1">
+                    <p>DDR5 RAM 1</p>
+                </div>
+                <div class="ram-grid-item" data-type="ddr5">
+                    <img src="../../../assets/ram/ddr5/ddr5-2.png" alt="DDR5 RAM 2">
+                    <p>DDR5 RAM 2</p>
+                </div>
+                <div class="ram-grid-item" data-type="ddr5">
+                    <img src="../../../assets/ram/ddr5/ddr5-3.png" alt="DDR5 RAM 3">
+                    <p>DDR5 RAM 3</p>
+                </div>
+                <div class="ram-grid-item" data-type="ddr5">
+                    <img src="../../../assets/ram/ddr5/ddr5-4.png" alt="DDR5 RAM 4">
+                    <p>DDR5 RAM 4</p>
+                </div>
+                <div class="ram-grid-item" data-type="ddr5">
+                    <img src="../../../assets/ram/ddr5/ddr5-5.png" alt="DDR5 RAM 5">
+                    <p>DDR5 RAM 5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-nav"></div>
+    <script>
+        // Filtering logic for RAM type
+        document.querySelectorAll('input[name="ram-type"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedValue = document.querySelector('input[name="ram-type"]:checked').value;
+                document.querySelectorAll('.ram-grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-type') === selectedValue ? 'block' : 'none';
+                });
+            });
+        });
+
+        // On load, show only checked type
+        window.addEventListener('DOMContentLoaded', () => {
+            const checked = document.querySelector('input[name="ram-type"]:checked');
+            if (checked) checked.dispatchEvent(new Event('change'));
+        });
+    </script>
+</body>
+</html>

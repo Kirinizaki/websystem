@@ -1,215 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>AMD CPU LIST</title>
+    <title>Ryzen CPU List</title>
     <link rel="stylesheet" href="../../../styles/index.css">
     <link rel="stylesheet" href="../../../styles/cpu-amd/ryzen-cpu-list.css">
-    
 </head>
 <body>
     <div id="nav"></div>
-    <div class="page-title">
-        <h1>AMD PROCESSORS LIST</h1>
+    <div class="ryzen-page-title">
+        <h1>RYZEN CPU LIST</h1>
     </div>
-    <div class="landing-page">
-        <div class="amd-sidebar">
-            <input type="radio" name="cpu" value="r3" id="r3" checked>
-            <label for="r3" class="button">Ryzen 3</label>
-            <input type="radio" name="cpu" value="r5" id="r5">
-            <label for="r5" class="button">Ryzen 5</label>
-            <input type="radio" name="cpu" value="r7" id="r7">
-            <label for="r7" class="button">Ryzen 7</label>
-            <input type="radio" name="cpu" value="r9" id="r9">
-            <label for="r9" class="button">Ryzen 9</label>
+    <div class="ryzen-landing-page">
+        <div class="ryzen-topbar">
+            <div class="ryzen-series-group">
+                <input type="radio" name="ryzen-series" value="r3" id="r3-series" class="ryzen-series-radio" checked>
+                <label for="r3-series" class="ryzen-series-label">Ryzen 3</label>
+                <input type="radio" name="ryzen-series" value="r5" id="r5-series" class="ryzen-series-radio">
+                <label for="r5-series" class="ryzen-series-label">Ryzen 5</label>
+                <input type="radio" name="ryzen-series" value="r7" id="r7-series" class="ryzen-series-radio">
+                <label for="r7-series" class="ryzen-series-label">Ryzen 7</label>
+                <input type="radio" name="ryzen-series" value="r9" id="r9-series" class="ryzen-series-radio">
+                <label for="r9-series" class="ryzen-series-label">Ryzen 9</label>
+            </div>
+            <a href="../intel-cpu/intel-cpu-list.html" class="ryzen-intel-link">Intel Page</a>
         </div>
-        <div class="scrollable-content">
-            <div class="grid-container">
+        <div class="ryzen-scrollable-content">
+            <div class="ryzen-grid-container">
                 <!-- Ryzen 3 Items -->
-                <div class="grid-item" data-cpu="r3">
-                    <img src="../../../assets/cpu/cpu-amd/ryzen3/3rd.png" alt="Ryzen 3 3100">
-                    <p>Ryzen 3 3100</p></div>
-                <div class="grid-item" data-cpu="r3">
-                    <img src="../../../assets/cpu/cpu-amd/ryzen3/2nd.png" alt="Ryzen 3 3200G">
-                    <p>Ryzen 3 3200G</p></div>
-                <div class="grid-item" data-cpu="r3">
-                    <img src="../../../assets/cpu/cpu-amd/ryzen3/3rd.png" alt="Ryzen 3 3300X">
-                    <p>Ryzen 3 3300X</p></div>
-                <div class="grid-item" data-cpu="r3">
-                    <img src="../../../assets/cpu/cpu-amd/ryzen3/4th.png" alt="Ryzen 3 4100">
-                    <p>Ryzen 3 4100</p></div>
-                <div class="grid-item" data-cpu="r3">
-                    <img src="../../../assets/cpu/cpu-amd/ryzen3/5th.png" alt="Ryzen 3 5300G">
-                    <p>Ryzen 3 5300G</p></div>
-                <div class="grid-item" data-cpu="r3">
-                    <img src="../../../assets/cpu/cpu-amd/ryzen3/8th.png" alt="Ryzen 3 8300G">
-                    <p>Ryzen 3 8300G</p></div>
-                
+                <div class="ryzen-grid-item" data-series="r3">
+                    <img src="../../../assets/cpu/amd/ryzen3/ryzen3-1.png" alt="Ryzen 3 CPU 1">
+                    <p>Ryzen 3 CPU 1</p>
+                </div>
+                <div class="ryzen-grid-item" data-series="r3">
+                    <img src="../../../assets/cpu/amd/ryzen3/ryzen3-2.png" alt="Ryzen 3 CPU 2">
+                    <p>Ryzen 3 CPU 2</p>
+                </div>
                 <!-- Ryzen 5 Items -->
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 3400G">
-                    <p>Ryzen 5 3400G</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 3600">
-                    <p>Ryzen 5 3600</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 3600X">
-                    <p>Ryzen 5 3600X</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 4500">
-                    <p>Ryzen 5 4500</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 3500">
-                    <p>Ryzen 5 3500</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 5500GT">
-                    <p>Ryzen 5 5500GT</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 5600">
-                    <p>Ryzen 5 5600</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 5600G">
-                    <p>Ryzen 5 5600G</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 5600X">
-                    <p>Ryzen 5 5600X</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 7500F">
-                    <p>Ryzen 5 7500F</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 7600">
-                    <p>Ryzen 5 7600</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 7600X">
-                    <p>Ryzen 5 7600X</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 7600X3D">
-                    <p>Ryzen 5 7600X3D</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 8400F">
-                    <p>Ryzen 5 8400F</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 8600G">
-                    <p>Ryzen 5 8600G</p></div>
-                <div class="grid-item" data-cpu="r5">
-                    <img src="" alt="Ryzen 5 9600X">
-                    <p>Ryzen 5 9600X</p></div>
-
+                <div class="ryzen-grid-item" data-series="r5">
+                    <img src="../../../assets/cpu/amd/ryzen5/ryzen5-1.png" alt="Ryzen 5 CPU 1">
+                    <p>Ryzen 5 CPU 1</p>
+                </div>
+                <div class="ryzen-grid-item" data-series="r5">
+                    <img src="../../../assets/cpu/amd/ryzen5/ryzen5-2.png" alt="Ryzen 5 CPU 2">
+                    <p>Ryzen 5 CPU 2</p>
+                </div>
                 <!-- Ryzen 7 Items -->
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 3700X">
-                    <p>Ryzen 7 3700X</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 3800X">
-                    <p>Ryzen 7 3800X</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 4700G">
-                    <p>Ryzen 7 4700G</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 5700">
-                    <p>Ryzen 7 5700</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 5700X">
-                    <p>Ryzen 7 5700X</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 5700X3D">
-                    <p>Ryzen 7 5700X3D</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 5700G">
-                    <p>Ryzen 7 5700G</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 5800X">
-                    <p>Ryzen 7 5800X</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 5800XT">
-                    <p>Ryzen 7 5800XT</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 5800X3D">
-                    <p>Ryzen 7 5800X3D</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 7700">
-                    <p>Ryzen 7 7700</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 7700X">
-                    <p>Ryzen 7 7700X</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 7800X3D">
-                    <p>Ryzen 7 7800X3D</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 8700G">
-                    <p>Ryzen 7 8700G</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 9700X">
-                    <p>Ryzen 7 9700X</p></div>
-                <div class="grid-item" data-cpu="r7">
-                    <img src="" alt="Ryzen 7 9800X3D">
-                    <p>Ryzen 7 9800X3D</p></div>
-
+                <div class="ryzen-grid-item" data-series="r7">
+                    <img src="../../../assets/cpu/amd/ryzen7/ryzen7-1.png" alt="Ryzen 7 CPU 1">
+                    <p>Ryzen 7 CPU 1</p>
+                </div>
+                <div class="ryzen-grid-item" data-series="r7">
+                    <img src="../../../assets/cpu/amd/ryzen7/ryzen7-2.png" alt="Ryzen 7 CPU 2">
+                    <p>Ryzen 7 CPU 2</p>
+                </div>
                 <!-- Ryzen 9 Items -->
-                <div class="grid-item" data-cpu="r9">
-                    <img src="../../../assets/cpu/" alt="Ryzen 9 3900X">
-                    <p>Ryzen 9 3900X</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 3900XT">
-                    <p>Ryzen 9 3900XT</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 5900X">
-                    <p>Ryzen 9 5900X</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 5900XT">
-                    <p>Ryzen 9 5900XT</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 5950X">
-                    <p>Ryzen 9 5950X</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 7900">
-                    <p>Ryzen 9 7900</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 7900X">
-                    <p>Ryzen 9 7900X</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 7900X3D/p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 7950X">
-                    <p>Ryzen 9 7950X</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 7955X3D0">
-                    <p>Ryzen 9 7950X3D</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 9900X">
-                    <p>Ryzen 9 9900X</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 9950X">
-                    <p>Ryzen 9 9950X</p></div>
-                <div class="grid-item" data-cpu="r9">
-                    <img src="" alt="Ryzen 9 9950X3D">
-                    <p>Ryzen 9 9950X3D</p></div>
+                <div class="ryzen-grid-item" data-series="r9">
+                    <img src="../../../assets/cpu/amd/ryzen9/ryzen9-1.png" alt="Ryzen 9 CPU 1">
+                    <p>Ryzen 9 CPU 1</p>
+                </div>
+                <div class="ryzen-grid-item" data-series="r9">
+                    <img src="../../../assets/cpu/amd/ryzen9/ryzen9-2.png" alt="Ryzen 9 CPU 2">
+                    <p>Ryzen 9 CPU 2</p>
+                </div>
             </div>
         </div>
     </div>
     <div id="bottom-nav"></div>
     <script>
-        document.querySelectorAll('input[name="cpu"]').forEach(radio => {
+        // Filtering logic for AMD series
+        document.querySelectorAll('input[name="ryzen-series"]').forEach(radio => {
             radio.addEventListener('change', () => {
-                const selectedValue = document.querySelector('input[name="cpu"]:checked').value;
-                document.querySelectorAll('.grid-item').forEach(item => {
-                    item.style.display = item.getAttribute('data-cpu') === selectedValue ? 'block' : 'none';
+                const selectedValue = document.querySelector('input[name="ryzen-series"]:checked').value;
+                document.querySelectorAll('.ryzen-grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-series') === selectedValue ? 'block' : 'none';
                 });
             });
         });
 
-        // Get the query parameter from the URL
-        const params = new URLSearchParams(window.location.search);
-        const selectedCpu = params.get('cpu');
-
-        // Set the corresponding radio button as checked
-        if (selectedCpu) {
-            const radio = document.getElementById(selectedCpu);
-            if (radio) {
-                radio.checked = true;
-                // Trigger the change event to update the content visibility
-                radio.dispatchEvent(new Event('change'));
+        // On load, show only checked series and handle ?cpu= query param
+        window.addEventListener('DOMContentLoaded', () => {
+            // Check for ?cpu= in URL
+            const params = new URLSearchParams(window.location.search);
+            const cpu = params.get('cpu');
+            if (cpu && ['r3','r5','r7','r9'].includes(cpu)) {
+                const radio = document.getElementById(cpu + '-series');
+                if (radio) {
+                    radio.checked = true;
+                }
             }
-        }
+            const checked = document.querySelector('input[name="ryzen-series"]:checked');
+            if (checked) checked.dispatchEvent(new Event('change'));
+        });
     </script>
 </body>
 </html>

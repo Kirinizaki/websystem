@@ -1,116 +1,162 @@
-.page-title {
+/* --- Ryzen Page Title --- */
+.ryzen-page-title {
     text-align: center;
     margin: 40px auto 0;
-    background-color: #000000;
-    color: #ED1C24;
+    background-color: #1a1a1a;
+    color: #ED1C24; /* Changed from #FF9100 to #ED1C24 */
     padding: 20px;
     border-radius: 18px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     width: 30%;
 }
 
-.page-title h1 {
+.ryzen-page-title h1 {
     font-size: 2.5em;
     margin: 0;
 }
 
-.landing-page {
+/* --- Top Bar for Buttons --- */
+.ryzen-topbar {
     display: flex;
+    justify-content: space-between; /* Add space between left group and right button */
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto; /* Remove bottom margin */
+    padding-top: 10px;
+    margin-bottom: 0;    /* Ensure no gap below */
+    padding-bottom: 0;   /* Ensure no gap below */
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Ryzen Series Buttons (Left) --- */
+.ryzen-series-group {
+    display: flex;
+    gap: 18px;
+}
+
+.ryzen-series-radio {
+    display: none;
+}
+
+.ryzen-series-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 48px;
+    background-color: #ED1C24; /* Red background */
+    color: #fff;               /* White text for visibility */
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s, color 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.ryzen-series-label:hover {
+    background-color: #fff; /* Black on hover */
+    color: #000;            /* Keep text white on hover */
+}
+
+.ryzen-series-radio:checked + .ryzen-series-label {
+    width: 170px;
+    background-color: #000;    /* White background when selected */
+    color: #fff;            /* Red text when selected */
+    border-radius: 14px 14px 0 0;
+}
+
+/* --- Intel Button (Top Right) --- */
+.ryzen-intel-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 48px;
+    background-color: #00ADEF;
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    animation: intel-pulse 1.2s infinite alternate;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+}
+
+.ryzen-intel-link:hover {
+    background-color: #0074A6;
+}
+
+@keyframes intel-pulse {
+    0% { box-shadow: 0 0 0 0 #00ADEF40; }
+    100% { box-shadow: 0 0 16px 8px #00ADEF20; }
+}
+
+/* --- Layout --- */
+.ryzen-landing-page {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     overflow: hidden;
     margin-top: 40px;
 }
 
-.amd-sidebar {
-    width: 150px;
-    position: fixed;
-    top: calc(50% + 40px);
-    left: 41px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 30px;
-    opacity: 0.9;
+/* --- Scrollable Content --- */
+.ryzen-scrollable-content {
+    flex: 1;
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+    padding: 0 20px 20px 20px; /* Remove top padding */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    opacity: 0.95;
 }
-
-.amd-sidebar input {
+.ryzen-scrollable-content::-webkit-scrollbar {
     display: none;
 }
 
-.amd-sidebar label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 160px;
-    height: 70px;
-    background-color: #ED1C24;
-    color: #ffffff;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 20px;
-    border-radius: 18px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.amd-sidebar label:hover {
-    background-color: #ED1C24;
-}
-
-.amd-sidebar input:checked + label {
-    width: 240px;
-    background-color: black;
-    border-radius: 18px 0 0 18px;
-}
-
-.scrollable-content {
-    flex: 1;
-    margin-left: 170px;
-    height: calc(100vh - 100px);
-    overflow-y: auto;
-    padding: 20px;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; 
-}
-.scrollable-content::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-}
-
-.grid-container {
-    height: 600px;
+/* --- Grid Container --- */
+.ryzen-grid-container {
+    min-height: 600px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     justify-items: center;
     align-items: center;
-    background-color: #000000;
-    width: 90%;
+    background-color: #1a1a1a;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     overflow-x: auto;
-    opacity: 0.9;
+    opacity: 0.95;
     scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; 
+    -ms-overflow-style: none;
 }
-.grid-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+.ryzen-grid-container::-webkit-scrollbar {
+    display: none;
 }
 
-.grid-item {
+/* --- Grid Item --- */
+.ryzen-grid-item {
     width: 220px;
     height: 240px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(26, 26, 26, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #ED1C24;
-    background-color: rgba(255, 0, 0, 0.1);
-    color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #ED1C24; /* Changed from #FF9100 to #ED1C24 */
+    color: #fff;
     text-align: center;
 }
 
-.grid-item img {
+.ryzen-grid-item img {
     width: 180px;
     height: 180px;
     object-fit: contain;
@@ -119,7 +165,7 @@
     opacity: 1.0;
 }
 
-.grid-item p {
+.ryzen-grid-item p {
     text-align: center;
     font-size: 1.1em;
     margin: 0;
