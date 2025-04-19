@@ -3,203 +3,273 @@
 <head>
     <title>Storage List</title>
     <link rel="stylesheet" href="../../../styles/index.css">
-    <link rel="stylesheet" href="../../../styles/cpu-intel/intel-cpu-list.css">
+    <link rel="stylesheet" href="../../../styles/storage/storage-list.css">
 </head>
 <body>
     <div id="nav"></div>
-    <div class="page-title">
+    <div class="storage-page-title">
         <h1>STORAGE DEVICES LIST</h1>
     </div>
-    <div class="landing-page">
-        <div class="intel-sidebar">
-            <input type="radio" name="storage" value="nvme" id="nvme" checked>
-            <label for="nvme" class="button">NVMe SSD</label>
-            <input type="radio" name="storage" value="sata" id="sata">
-            <label for="sata" class="button">SATA SSD</label>
-            <input type="radio" name="storage" value="hdd" id="hdd">
-            <label for="hdd" class="button">HDD</label>
+    <div class="storage-landing-page">
+        <div class="storage-topbar">
+            <div class="storage-type-group">
+                <input type="radio" name="storage-type" value="nvme" id="nvme-type" class="storage-type-radio" checked>
+                <label for="nvme-type" class="storage-type-label">NVMe</label>
+                <input type="radio" name="storage-type" value="sata" id="sata-type" class="storage-type-radio">
+                <label for="sata-type" class="storage-type-label">SATA</label>
+                <input type="radio" name="storage-type" value="hdd" id="hdd-type" class="storage-type-radio">
+                <label for="hdd-type" class="storage-type-label">HDD</label>
+            </div>
         </div>
-        <div class="scrollable-content">
-            <div class="grid-container">
+        <div class="storage-scrollable-content">
+            <div class="storage-grid-container">
                 <!-- NVMe Items -->
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme1.png" alt="Samsung 980 Pro NVMe">
-                    <p>Samsung 980 Pro NVMe</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme1.png" alt="NVMe 1TB">
+                    <p>NVMe 1TB</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme2.png" alt="WD Black SN850">
-                    <p>WD Black SN850</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme2.png" alt="NVMe 2TB">
+                    <p>NVMe 2TB</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme3.png" alt="Crucial P5 Plus">
-                    <p>Crucial P5 Plus</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme500.png" alt="NVMe 500GB">
+                    <p>NVMe 500GB</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme4.png" alt="Kingston KC3000">
-                    <p>Kingston KC3000</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme256.png" alt="NVMe 256GB">
+                    <p>NVMe 256GB</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme5.png" alt="ADATA XPG GAMMIX S70">
-                    <p>ADATA XPG GAMMIX S70</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme4tb.png" alt="NVMe 4TB">
+                    <p>NVMe 4TB</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme6.png" alt="Corsair MP600 Pro XT">
-                    <p>Corsair MP600 Pro XT</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme8tb.png" alt="NVMe 8TB">
+                    <p>NVMe 8TB</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme7.png" alt="Sabrent Rocket 4 Plus">
-                    <p>Sabrent Rocket 4 Plus</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme128.png" alt="NVMe 128GB">
+                    <p>NVMe 128GB</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme8.png" alt="Intel 670p">
-                    <p>Intel 670p</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme256pro.png" alt="NVMe 256GB Pro">
+                    <p>NVMe 256GB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme9.png" alt="Patriot Viper VP4300">
-                    <p>Patriot Viper VP4300</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme500pro.png" alt="NVMe 500GB Pro">
+                    <p>NVMe 500GB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme10.png" alt="TeamGroup MP34">
-                    <p>TeamGroup MP34</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme1pro.png" alt="NVMe 1TB Pro">
+                    <p>NVMe 1TB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme11.png" alt="PNY XLR8 CS3140">
-                    <p>PNY XLR8 CS3140</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme2pro.png" alt="NVMe 2TB Pro">
+                    <p>NVMe 2TB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="nvme">
-                    <img src="../../../assets/storage/nvme/nvme12.png" alt="Silicon Power US70">
-                    <p>Silicon Power US70</p>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme4pro.png" alt="NVMe 4TB Pro">
+                    <p>NVMe 4TB Pro</p>
+                </div>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme8pro.png" alt="NVMe 8TB Pro">
+                    <p>NVMe 8TB Pro</p>
+                </div>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme1lite.png" alt="NVMe 1TB Lite">
+                    <p>NVMe 1TB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme2lite.png" alt="NVMe 2TB Lite">
+                    <p>NVMe 2TB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme500lite.png" alt="NVMe 500GB Lite">
+                    <p>NVMe 500GB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme256lite.png" alt="NVMe 256GB Lite">
+                    <p>NVMe 256GB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme128lite.png" alt="NVMe 128GB Lite">
+                    <p>NVMe 128GB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="nvme">
+                    <img src="../../../assets/storage/nvme/nvme64.png" alt="NVMe 64GB">
+                    <p>NVMe 64GB</p>
                 </div>
                 <!-- SATA Items -->
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata1.png" alt="Samsung 870 EVO">
-                    <p>Samsung 870 EVO</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata1tb.png" alt="SATA SSD 1TB">
+                    <p>SATA SSD 1TB</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata2.png" alt="Crucial MX500">
-                    <p>Crucial MX500</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata2tb.png" alt="SATA SSD 2TB">
+                    <p>SATA SSD 2TB</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata3.png" alt="WD Blue 3D NAND">
-                    <p>WD Blue 3D NAND</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata500.png" alt="SATA SSD 500GB">
+                    <p>SATA SSD 500GB</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata4.png" alt="SanDisk Ultra 3D">
-                    <p>SanDisk Ultra 3D</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata256.png" alt="SATA SSD 256GB">
+                    <p>SATA SSD 256GB</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata5.png" alt="ADATA SU800">
-                    <p>ADATA SU800</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata128.png" alt="SATA SSD 128GB">
+                    <p>SATA SSD 128GB</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata6.png" alt="Kingston A400">
-                    <p>Kingston A400</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata4tb.png" alt="SATA SSD 4TB">
+                    <p>SATA SSD 4TB</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata7.png" alt="SK hynix Gold S31">
-                    <p>SK hynix Gold S31</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata8tb.png" alt="SATA SSD 8TB">
+                    <p>SATA SSD 8TB</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata8.png" alt="Transcend SSD230S">
-                    <p>Transcend SSD230S</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata256pro.png" alt="SATA SSD 256GB Pro">
+                    <p>SATA SSD 256GB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata9.png" alt="Mushkin Source">
-                    <p>Mushkin Source</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata500pro.png" alt="SATA SSD 500GB Pro">
+                    <p>SATA SSD 500GB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata10.png" alt="Patriot Burst">
-                    <p>Patriot Burst</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata1pro.png" alt="SATA SSD 1TB Pro">
+                    <p>SATA SSD 1TB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata11.png" alt="TeamGroup GX2">
-                    <p>TeamGroup GX2</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata2pro.png" alt="SATA SSD 2TB Pro">
+                    <p>SATA SSD 2TB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="sata">
-                    <img src="../../../assets/storage/sata/sata12.png" alt="PNY CS900">
-                    <p>PNY CS900</p>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata4pro.png" alt="SATA SSD 4TB Pro">
+                    <p>SATA SSD 4TB Pro</p>
+                </div>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata8pro.png" alt="SATA SSD 8TB Pro">
+                    <p>SATA SSD 8TB Pro</p>
+                </div>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata1lite.png" alt="SATA SSD 1TB Lite">
+                    <p>SATA SSD 1TB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata2lite.png" alt="SATA SSD 2TB Lite">
+                    <p>SATA SSD 2TB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata500lite.png" alt="SATA SSD 500GB Lite">
+                    <p>SATA SSD 500GB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata256lite.png" alt="SATA SSD 256GB Lite">
+                    <p>SATA SSD 256GB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata128lite.png" alt="SATA SSD 128GB Lite">
+                    <p>SATA SSD 128GB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="sata">
+                    <img src="../../../assets/storage/sata/sata64.png" alt="SATA SSD 64GB">
+                    <p>SATA SSD 64GB</p>
                 </div>
                 <!-- HDD Items -->
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd1.png" alt="Seagate Barracuda">
-                    <p>Seagate Barracuda</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd1tb.png" alt="HDD 1TB">
+                    <p>HDD 1TB</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd2.png" alt="WD Blue HDD">
-                    <p>WD Blue HDD</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd2tb.png" alt="HDD 2TB">
+                    <p>HDD 2TB</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd3.png" alt="Toshiba P300">
-                    <p>Toshiba P300</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd500.png" alt="HDD 500GB">
+                    <p>HDD 500GB</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd4.png" alt="Seagate IronWolf">
-                    <p>Seagate IronWolf</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd4tb.png" alt="HDD 4TB">
+                    <p>HDD 4TB</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd5.png" alt="WD Black HDD">
-                    <p>WD Black HDD</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd8tb.png" alt="HDD 8TB">
+                    <p>HDD 8TB</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd6.png" alt="Toshiba X300">
-                    <p>Toshiba X300</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd128.png" alt="HDD 128GB">
+                    <p>HDD 128GB</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd7.png" alt="HGST Deskstar">
-                    <p>HGST Deskstar</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd256.png" alt="HDD 256GB">
+                    <p>HDD 256GB</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd8.png" alt="Seagate Exos">
-                    <p>Seagate Exos</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd500pro.png" alt="HDD 500GB Pro">
+                    <p>HDD 500GB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd9.png" alt="WD Gold">
-                    <p>WD Gold</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd1pro.png" alt="HDD 1TB Pro">
+                    <p>HDD 1TB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd10.png" alt="Toshiba N300">
-                    <p>Toshiba N300</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd2pro.png" alt="HDD 2TB Pro">
+                    <p>HDD 2TB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd11.png" alt="Seagate SkyHawk">
-                    <p>Seagate SkyHawk</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd4pro.png" alt="HDD 4TB Pro">
+                    <p>HDD 4TB Pro</p>
                 </div>
-                <div class="grid-item" data-storage="hdd">
-                    <img src="../../../assets/storage/hdd/hdd12.png" alt="WD Purple">
-                    <p>WD Purple</p>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd8pro.png" alt="HDD 8TB Pro">
+                    <p>HDD 8TB Pro</p>
+                </div>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd1lite.png" alt="HDD 1TB Lite">
+                    <p>HDD 1TB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd2lite.png" alt="HDD 2TB Lite">
+                    <p>HDD 2TB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd500lite.png" alt="HDD 500GB Lite">
+                    <p>HDD 500GB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd256lite.png" alt="HDD 256GB Lite">
+                    <p>HDD 256GB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd128lite.png" alt="HDD 128GB Lite">
+                    <p>HDD 128GB Lite</p>
+                </div>
+                <div class="storage-grid-item" data-type="hdd">
+                    <img src="../../../assets/storage/hdd/hdd64.png" alt="HDD 64GB">
+                    <p>HDD 64GB</p>
                 </div>
             </div>
         </div>
     </div>
     <div id="bottom-nav"></div>
     <script>
-        document.querySelectorAll('input[name="storage"]').forEach(radio => {
+        // Filtering logic for storage type
+        document.querySelectorAll('input[name="storage-type"]').forEach(radio => {
             radio.addEventListener('change', () => {
-                const selectedValue = document.querySelector('input[name="storage"]:checked').value;
-                document.querySelectorAll('.grid-item').forEach(item => {
-                    item.style.display = item.getAttribute('data-storage') === selectedValue ? 'block' : 'none';
+                const selectedValue = document.querySelector('input[name="storage-type"]:checked').value;
+                document.querySelectorAll('.storage-grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-type') === selectedValue ? 'block' : 'none';
                 });
             });
         });
 
-        // Get the query parameter from the URL
-        const params = new URLSearchParams(window.location.search);
-        const selectedStorage = params.get('storage');
-
-        // Set the corresponding radio button as checked
-        if (selectedStorage) {
-            const radio = document.getElementById(selectedStorage);
-            if (radio) {
-                radio.checked = true;
-                // Trigger the change event to update the content visibility
-                radio.dispatchEvent(new Event('change'));
-            }
-        } else {
-            // Show only NVMe by default
-            document.querySelectorAll('.grid-item').forEach(item => {
-                item.style.display = item.getAttribute('data-storage') === 'nvme' ? 'block' : 'none';
-            });
-        }
+        // On load, show only checked type
+        window.addEventListener('DOMContentLoaded', () => {
+            const checked = document.querySelector('input[name="storage-type"]:checked');
+            if (checked) checked.dispatchEvent(new Event('change'));
+        });
     </script>
 </body>
 </html>
