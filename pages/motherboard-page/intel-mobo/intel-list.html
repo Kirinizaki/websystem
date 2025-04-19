@@ -234,8 +234,29 @@
             });
         });
 
-        // On load, show only checked series
+        // On load, show only checked series or series from URL
         window.addEventListener('DOMContentLoaded', () => {
+            // Get 'series' from query string (e.g., ?series=h-series)
+            const params = new URLSearchParams(window.location.search);
+            const seriesParam = params.get('series');
+            let seriesValue = null;
+            if (seriesParam) {
+                // Accept both 'h', 'b', 'z' and 'h-series', 'b-series', 'z-series'
+                if (['h', 'b', 'z'].includes(seriesParam)) {
+                    seriesValue = seriesParam;
+                } else if (['h-series', 'b-series', 'z-series'].includes(seriesParam)) {
+                    seriesValue = seriesParam[0]; // 'h', 'b', or 'z'
+                }
+            }
+            if (seriesValue) {
+                const radio = document.getElementById(seriesValue + '-series');
+                if (radio) {
+                    radio.checked = true;
+                    radio.dispatchEvent(new Event('change'));
+                    return;
+                }
+            }
+            // Default: show checked
             const checked = document.querySelector('input[name="intel-series"]:checked');
             if (checked) checked.dispatchEvent(new Event('change'));
         });

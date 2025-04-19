@@ -234,8 +234,29 @@
             });
         });
 
-        // On load, show only checked series
+        // On load, show only checked series or series from URL
         window.addEventListener('DOMContentLoaded', () => {
+            // Get 'series' from query string (e.g., ?series=a-series)
+            const params = new URLSearchParams(window.location.search);
+            const seriesParam = params.get('series');
+            let seriesValue = null;
+            if (seriesParam) {
+                // Accept both 'a', 'b', 'x' and 'a-series', 'b-series', 'x-series'
+                if (['a', 'b', 'x'].includes(seriesParam)) {
+                    seriesValue = seriesParam;
+                } else if (['a-series', 'b-series', 'x-series'].includes(seriesParam)) {
+                    seriesValue = seriesParam[0]; // 'a', 'b', or 'x'
+                }
+            }
+            if (seriesValue) {
+                const radio = document.getElementById(seriesValue + '-series');
+                if (radio) {
+                    radio.checked = true;
+                    radio.dispatchEvent(new Event('change'));
+                    return;
+                }
+            }
+            // Default: show checked
             const checked = document.querySelector('input[name="amd-series"]:checked');
             if (checked) checked.dispatchEvent(new Event('change'));
         });
