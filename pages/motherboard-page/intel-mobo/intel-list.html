@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Intel Motherboard List</title>
+    <link rel="stylesheet" href="../../../styles/index.css">
+    <link rel="stylesheet" href="../../../styles/motherboard/intel-css/intel-list.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="intel-mobo-page-title">
+        <h1>INTEL MOTHERBOARD LIST</h1>
+    </div>
+    <div class="intel-mobo-landing-page">
+        <div class="intel-mobo-topbar" style="position:relative;">
+            <div class="intel-mobo-series-group">
+                <input type="radio" name="intel-mobo-series" value="h" id="h-series" class="intel-mobo-series-radio" checked>
+                <label for="h-series" class="intel-mobo-series-label">h-series</label>
+                <input type="radio" name="intel-mobo-series" value="b" id="b-series" class="intel-mobo-series-radio">
+                <label for="b-series" class="intel-mobo-series-label">b-series</label>
+                <input type="radio" name="intel-mobo-series" value="z" id="z-series" class="intel-mobo-series-radio">
+                <label for="z-series" class="intel-mobo-series-label">z-series</label>
+            </div>
+            <a href="../amd-mobo/amd-list.html" class="intel-amd-link">
+                AMD List
+            </a>
+        </div>
+        <div class="intel-mobo-scrollable-content">
+            <div class="intel-mobo-grid-container">
+                <!-- h-series Items -->
+                <div class="intel-mobo-grid-item" data-series="h">
+                    <img src="../../../assets/mobo/intel/h-series/h1.png" alt="H-Series Mobo 1">
+                    <p>H-Series Mobo 1</p>
+                </div>
+                <div class="intel-mobo-grid-item" data-series="h">
+                    <img src="../../../assets/mobo/intel/h-series/h2.png" alt="H-Series Mobo 2">
+                    <p>H-Series Mobo 2</p>
+                </div>
+                <!-- b-series Items -->
+                <div class="intel-mobo-grid-item" data-series="b">
+                    <img src="../../../assets/mobo/intel/b-series/b1.png" alt="B-Series Mobo 1">
+                    <p>B-Series Mobo 1</p>
+                </div>
+                <div class="intel-mobo-grid-item" data-series="b">
+                    <img src="../../../assets/mobo/intel/b-series/b2.png" alt="B-Series Mobo 2">
+                    <p>B-Series Mobo 2</p>
+                </div>
+                <!-- z-series Items -->
+                <div class="intel-mobo-grid-item" data-series="z">
+                    <img src="../../../assets/mobo/intel/z-series/z1.png" alt="Z-Series Mobo 1">
+                    <p>Z-Series Mobo 1</p>
+                </div>
+                <div class="intel-mobo-grid-item" data-series="z">
+                    <img src="../../../assets/mobo/intel/z-series/z2.png" alt="Z-Series Mobo 2">
+                    <p>Z-Series Mobo 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-nav"></div>
+    <script>
+        // Filtering logic for Intel mobo series
+        document.querySelectorAll('input[name="intel-mobo-series"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedValue = document.querySelector('input[name="intel-mobo-series"]:checked').value;
+                document.querySelectorAll('.intel-mobo-grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-series') === selectedValue ? 'block' : 'none';
+                });
+            });
+        });
+
+        // On load, show only checked series and handle ?series= query param
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const series = params.get('series');
+            if (series && ['h','b','z'].includes(series)) {
+                const radio = document.getElementById(series + '-series');
+                if (radio) {
+                    radio.checked = true;
+                }
+            }
+            const checked = document.querySelector('input[name="intel-mobo-series"]:checked');
+            if (checked) checked.dispatchEvent(new Event('change'));
+        });
+    </script>
+</body>
+</html>

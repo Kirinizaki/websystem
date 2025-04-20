@@ -5,249 +5,127 @@
     <link rel="stylesheet" href="../../../styles/index.css">
     <link rel="stylesheet" href="../../../styles/case/case-list.css">
 </head>
-<body class="intel-bg">
+<body>
     <div id="nav"></div>
-    <div class="page-title">
-        <h1>CASE FORM FACTORS</h1>
+    <div class="case-page-title">
+        <h1>CASE LIST</h1>
     </div>
-    <div class="landing-page">
-        <div class="case-sidebar">
-            <input type="radio" name="case" value="atx" id="atx" checked>
-            <label for="atx" class="button">ATX</label>
-            <input type="radio" name="case" value="micro-atx" id="micro-atx">
-            <label for="micro-atx" class="button">Micro-ATX</label>
-            <input type="radio" name="case" value="mini-itx" id="mini-itx">
-            <label for="mini-itx" class="button">Mini-ITX</label>
+    <div class="case-landing-page">
+        <div class="case-topbar" style="margin-bottom:0;padding-bottom:0;">
+            <div class="case-type-group">
+                <input type="radio" name="case-type" value="atx" id="atx-type" class="case-type-radio" checked>
+                <label for="atx-type" class="case-type-label">ATX</label>
+                <input type="radio" name="case-type" value="m-atx" id="matx-type" class="case-type-radio">
+                <label for="matx-type" class="case-type-label">M-ATX</label>
+                <input type="radio" name="case-type" value="m-itx" id="mitx-type" class="case-type-radio">
+                <label for="mitx-type" class="case-type-label">M-ITX</label>
+            </div>
         </div>
-        <div class="scrollable-content">
-            <div class="grid-container">
-                <!-- ATX Cases -->
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx1.png" alt="ATX Case 1">
+        <div class="case-scrollable-content" >
+            <div class="case-grid-container">
+                <!-- ATX Items -->
+                <div class="case-grid-item" data-type="atx">
+                    <img src="../../../assets/case/atx/atx1.png" alt="ATX Case 1">
                     <p>ATX Case 1</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx2.png" alt="ATX Case 2">
+                <div class="case-grid-item" data-type="atx">
+                    <img src="../../../assets/case/atx/atx2.png" alt="ATX Case 2">
                     <p>ATX Case 2</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx3.png" alt="ATX Case 3">
+                <div class="case-grid-item" data-type="atx">
+                    <img src="../../../assets/case/atx/atx3.png" alt="ATX Case 3">
                     <p>ATX Case 3</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx4.png" alt="ATX Case 4">
+                <div class="case-grid-item" data-type="atx">
+                    <img src="../../../assets/case/atx/atx4.png" alt="ATX Case 4">
                     <p>ATX Case 4</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx5.png" alt="ATX Case 5">
+                <div class="case-grid-item" data-type="atx">
+                    <img src="../../../assets/case/atx/atx5.png" alt="ATX Case 5">
                     <p>ATX Case 5</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx6.png" alt="ATX Case 6">
-                    <p>ATX Case 6</p>
+                <!-- M-ATX Items -->
+                <div class="case-grid-item" data-type="m-atx">
+                    <img src="../../../assets/case/m-atx/matx1.png" alt="M-ATX Case 1">
+                    <p>M-ATX Case 1</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx7.png" alt="ATX Case 7">
-                    <p>ATX Case 7</p>
+                <div class="case-grid-item" data-type="m-atx">
+                    <img src="../../../assets/case/m-atx/matx2.png" alt="M-ATX Case 2">
+                    <p>M-ATX Case 2</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx8.png" alt="ATX Case 8">
-                    <p>ATX Case 8</p>
+                <div class="case-grid-item" data-type="m-atx">
+                    <img src="../../../assets/case/m-atx/matx3.png" alt="M-ATX Case 3">
+                    <p>M-ATX Case 3</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx9.png" alt="ATX Case 9">
-                    <p>ATX Case 9</p>
+                <div class="case-grid-item" data-type="m-atx">
+                    <img src="../../../assets/case/m-atx/matx4.png" alt="M-ATX Case 4">
+                    <p>M-ATX Case 4</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx10.png" alt="ATX Case 10">
-                    <p>ATX Case 10</p>
+                <div class="case-grid-item" data-type="m-atx">
+                    <img src="../../../assets/case/m-atx/matx5.png" alt="M-ATX Case 5">
+                    <p>M-ATX Case 5</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx11.png" alt="ATX Case 11">
-                    <p>ATX Case 11</p>
+                <!-- M-ITX Items -->
+                <div class="case-grid-item" data-type="m-itx">
+                    <img src="../../../assets/case/m-itx/mitx1.png" alt="M-ITX Case 1">
+                    <p>M-ITX Case 1</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx12.png" alt="ATX Case 12">
-                    <p>ATX Case 12</p>
+                <div class="case-grid-item" data-type="m-itx">
+                    <img src="../../../assets/case/m-itx/mitx2.png" alt="M-ITX Case 2">
+                    <p>M-ITX Case 2</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx13.png" alt="ATX Case 13">
-                    <p>ATX Case 13</p>
+                <div class="case-grid-item" data-type="m-itx">
+                    <img src="../../../assets/case/m-itx/mitx3.png" alt="M-ITX Case 3">
+                    <p>M-ITX Case 3</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx14.png" alt="ATX Case 14">
-                    <p>ATX Case 14</p>
+                <div class="case-grid-item" data-type="m-itx">
+                    <img src="../../../assets/case/m-itx/mitx4.png" alt="M-ITX Case 4">
+                    <p>M-ITX Case 4</p>
                 </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx15.png" alt="ATX Case 15">
-                    <p>ATX Case 15</p>
-                </div>
-                <div class="grid-item" data-case="atx">
-                    <img src="../../../assets/case/atx16.png" alt="ATX Case 16">
-                    <p>ATX Case 16</p>
-                </div>
-                <!-- Micro-ATX Cases -->
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx1.png" alt="Micro-ATX Case 1">
-                    <p>Micro-ATX Case 1</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx2.png" alt="Micro-ATX Case 2">
-                    <p>Micro-ATX Case 2</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx3.png" alt="Micro-ATX Case 3">
-                    <p>Micro-ATX Case 3</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx4.png" alt="Micro-ATX Case 4">
-                    <p>Micro-ATX Case 4</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx5.png" alt="Micro-ATX Case 5">
-                    <p>Micro-ATX Case 5</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx6.png" alt="Micro-ATX Case 6">
-                    <p>Micro-ATX Case 6</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx7.png" alt="Micro-ATX Case 7">
-                    <p>Micro-ATX Case 7</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx8.png" alt="Micro-ATX Case 8">
-                    <p>Micro-ATX Case 8</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx9.png" alt="Micro-ATX Case 9">
-                    <p>Micro-ATX Case 9</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx10.png" alt="Micro-ATX Case 10">
-                    <p>Micro-ATX Case 10</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx11.png" alt="Micro-ATX Case 11">
-                    <p>Micro-ATX Case 11</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx12.png" alt="Micro-ATX Case 12">
-                    <p>Micro-ATX Case 12</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx13.png" alt="Micro-ATX Case 13">
-                    <p>Micro-ATX Case 13</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx14.png" alt="Micro-ATX Case 14">
-                    <p>Micro-ATX Case 14</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx15.png" alt="Micro-ATX Case 15">
-                    <p>Micro-ATX Case 15</p>
-                </div>
-                <div class="grid-item" data-case="micro-atx">
-                    <img src="../../../assets/case/matx16.png" alt="Micro-ATX Case 16">
-                    <p>Micro-ATX Case 16</p>
-                </div>
-                <!-- Mini-ITX Cases -->
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx1.png" alt="Mini-ITX Case 1">
-                    <p>Mini-ITX Case 1</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx2.png" alt="Mini-ITX Case 2">
-                    <p>Mini-ITX Case 2</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx3.png" alt="Mini-ITX Case 3">
-                    <p>Mini-ITX Case 3</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx4.png" alt="Mini-ITX Case 4">
-                    <p>Mini-ITX Case 4</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx5.png" alt="Mini-ITX Case 5">
-                    <p>Mini-ITX Case 5</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx6.png" alt="Mini-ITX Case 6">
-                    <p>Mini-ITX Case 6</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx7.png" alt="Mini-ITX Case 7">
-                    <p>Mini-ITX Case 7</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx8.png" alt="Mini-ITX Case 8">
-                    <p>Mini-ITX Case 8</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx9.png" alt="Mini-ITX Case 9">
-                    <p>Mini-ITX Case 9</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx10.png" alt="Mini-ITX Case 10">
-                    <p>Mini-ITX Case 10</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx11.png" alt="Mini-ITX Case 11">
-                    <p>Mini-ITX Case 11</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx12.png" alt="Mini-ITX Case 12">
-                    <p>Mini-ITX Case 12</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx13.png" alt="Mini-ITX Case 13">
-                    <p>Mini-ITX Case 13</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx14.png" alt="Mini-ITX Case 14">
-                    <p>Mini-ITX Case 14</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx15.png" alt="Mini-ITX Case 15">
-                    <p>Mini-ITX Case 15</p>
-                </div>
-                <div class="grid-item" data-case="mini-itx">
-                    <img src="../../../assets/case/itx16.png" alt="Mini-ITX Case 16">
-                    <p>Mini-ITX Case 16</p>
+                <div class="case-grid-item" data-type="m-itx">
+                    <img src="../../../assets/case/m-itx/mitx5.png" alt="M-ITX Case 5">
+                    <p>M-ITX Case 5</p>
                 </div>
             </div>
         </div>
     </div>
     <div id="bottom-nav"></div>
     <script>
-        document.querySelectorAll('input[name="case"]').forEach(radio => {
+        // Filtering logic for case type
+        document.querySelectorAll('input[name="case-type"]').forEach(radio => {
             radio.addEventListener('change', () => {
-                const selectedValue = document.querySelector('input[name="case"]:checked').value;
-                document.querySelectorAll('.grid-item').forEach(item => {
-                    item.style.display = item.getAttribute('data-case') === selectedValue ? 'block' : 'none';
+                const selectedValue = document.querySelector('input[name="case-type"]:checked').value;
+                document.querySelectorAll('.case-grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-type') === selectedValue ? 'block' : 'none';
                 });
             });
         });
 
-        // Get the query parameter from the URL
-        const params = new URLSearchParams(window.location.search);
-        const selectedCase = params.get('case');
-
-        // Set the corresponding radio button as checked
-        if (selectedCase) {
-            const radio = document.getElementById(selectedCase);
-            if (radio) {
-                radio.checked = true;
-                // Trigger the change event to update the content visibility
-                radio.dispatchEvent(new Event('change'));
+        // On load, show only checked type or type from URL
+        window.addEventListener('DOMContentLoaded', () => {
+            // Get 'type' from query string (e.g., ?type=atx)
+            const params = new URLSearchParams(window.location.search);
+            const typeParam = params.get('type');
+            let typeValue = null;
+            if (typeParam && ['atx', 'm-atx', 'm-itx'].includes(typeParam)) {
+                typeValue = typeParam;
             }
-        } else {
-            // Default: show only ATX cases
-            document.querySelectorAll('.grid-item').forEach(item => {
-                item.style.display = item.getAttribute('data-case') === 'atx' ? 'block' : 'none';
-            });
-        }
+            if (typeValue) {
+                let radioId = '';
+                if (typeValue === 'atx') radioId = 'atx-type';
+                else if (typeValue === 'm-atx') radioId = 'matx-type';
+                else if (typeValue === 'm-itx') radioId = 'mitx-type';
+                const radio = document.getElementById(radioId);
+                if (radio) {
+                    radio.checked = true;
+                    radio.dispatchEvent(new Event('change'));
+                    return;
+                }
+            }
+            // Default: show checked
+            const checked = document.querySelector('input[name="case-type"]:checked');
+            if (checked) checked.dispatchEvent(new Event('change'));
+        });
     </script>
 </body>
 </html>

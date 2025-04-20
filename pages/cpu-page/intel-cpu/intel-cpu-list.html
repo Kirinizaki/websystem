@@ -5,227 +5,284 @@
     <link rel="stylesheet" href="../../../styles/index.css">
     <link rel="stylesheet" href="../../../styles/cpu-intel/intel-cpu-list.css">
 </head>
-<body class="intel-bg">
+<body>
     <div id="nav"></div>
-    <div class="page-title">
-        <h1>INTEL PROCESSORS LIST</h1>
+    <div class="intel-page-title">
+        <h1>INTEL CPU LIST</h1>
     </div>
-    <div class="landing-page">
-        <div class="intel-sidebar">
-            <input type="radio" name="cpu" value="i3" id="i3" checked>
-            <label for="i3" class="button">Core i3</label>
-            <input type="radio" name="cpu" value="i5" id="i5">
-            <label for="i5" class="button">Core i5</label>
-            <input type="radio" name="cpu" value="i7" id="i7">
-            <label for="i7" class="button">Core i7</label>
-            <input type="radio" name="cpu" value="i9" id="i9">
-            <label for="i9" class="button">Core i9</label>
+    <div class="intel-landing-page">
+        <div class="intel-topbar">
+            <div class="intel-series-group">
+                <input type="radio" name="intel-series" value="i3" id="i3-series" class="intel-series-radio" checked>
+                <label for="i3-series" class="intel-series-label">Core i3</label>
+                <input type="radio" name="intel-series" value="i5" id="i5-series" class="intel-series-radio">
+                <label for="i5-series" class="intel-series-label">Core i5</label>
+                <input type="radio" name="intel-series" value="i7" id="i7-series" class="intel-series-radio">
+                <label for="i7-series" class="intel-series-label">Core i7</label>
+                <input type="radio" name="intel-series" value="i9" id="i9-series" class="intel-series-radio">
+                <label for="i9-series" class="intel-series-label">Core i9</label>
+            </div>
+            <a href="../amd-cpu/ryzen-cpu-list.html" class="intel-amd-link">AMD Page</a>
         </div>
-        <div class="scrollable-content">
-            <div class="grid-container">
-
+        <div class="intel-scrollable-content">
+            <div class="intel-grid-container">
                 <!-- Core i3 Items -->
-                <div class="grid-item" data-cpu="i3">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i3/10th-gen.png" alt="i3 10100">
-                    <p>i3 10100</p></div>
-                <div class="grid-item" data-cpu="i3">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i3/10th-gen.png" alt="i3 10100F">
-                    <p>i3 10100F</p></div>
-                <div class="grid-item" data-cpu="i3">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i3/12th-gen.png" alt="i3 12100">
-                    <p>i3 12100</p></div>
-                <div class="grid-item" data-cpu="i3">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i3/12thf-gen.png" alt="i3 12100F">
-                    <p>i3 12100F</p></div>
-                <div class="grid-item" data-cpu="i3">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i3/13th-gen.png" alt="i3 13100">
-                    <p>i3 13100</p></div>
-                <div class="grid-item" data-cpu="i3">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i3/13thf-gen.png" alt="i3 13100F">
-                    <p>i3 13100F</p></div>
-                <div class="grid-item" data-cpu="i3">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i3/14th-gen.png" alt="i3 14100">
-                    <p>i3 14100</p></div>
-                <div class="grid-item" data-cpu="i3">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i3/14thf-gen.png" alt="i3 14100F">
-                    <p>i3 14100F</p></div>
-                
+                <div class="intel-grid-item" data-series="i3">
+                    <img src="../../../assets/cpu/intel/i3/i3-10100.png" alt="Intel Core i3-10100">
+                    <p>Intel Core i3-10100</p>
+                </div>
+                <div class="intel-grid-item" data-series="i3">
+                    <img src="../../../assets/cpu/intel/i3/i3-10100f.png" alt="Intel Core i3-10100F">
+                    <p>Intel Core i3-10100F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i3">
+                    <img src="../../../assets/cpu/intel/i3/i3-12100.png" alt="Intel Core i3-12100">
+                    <p>Intel Core i3-12100</p>
+                </div>
+                <div class="intel-grid-item" data-series="i3">
+                    <img src="../../../assets/cpu/intel/i3/i3-12100f.png" alt="Intel Core i3-12100F">
+                    <p>Intel Core i3-12100F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i3">
+                    <img src="../../../assets/cpu/intel/i3/i3-13100.png" alt="Intel Core i3-13100">
+                    <p>Intel Core i3-13100</p>
+                </div>
+                <div class="intel-grid-item" data-series="i3">
+                    <img src="../../../assets/cpu/intel/i3/i3-13100f.png" alt="Intel Core i3-13100F">
+                    <p>Intel Core i3-13100F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i3">
+                    <img src="../../../assets/cpu/intel/i3/i3-14100.png" alt="Intel Core i3-14100">
+                    <p>Intel Core i3-14100</p>
+                </div>
+                <div class="intel-grid-item" data-series="i3">
+                    <img src="../../../assets/cpu/intel/i3/i3-14100f.png" alt="Intel Core i3-14100F">
+                    <p>Intel Core i3-14100F</p>
+                </div>
                 <!-- Core i5 Items -->
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/11th.png" alt="i5 11400">
-                    <p>i5 11400</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/11th.png" alt="i5 11400F">
-                    <p>i5 11400F</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/11th.png" alt="i5 11600K">
-                    <p>i5 11600K</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/11th.png" alt="i5 11600KF">
-                    <p>i5 11600KF</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/12th.png" alt="i5 12400">
-                    <p>i5 12400</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/12th.png" alt="i5 12400F">
-                    <p>i5 12400F</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/12th.png" alt="i5 12600K">
-                    <p>i5 12600K</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/12th.png" alt="i5 12600KF">
-                    <p>i5 12600KF</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/13th.png" alt="i5 13400">
-                    <p>i5 13400</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/13th.png" alt="i5 13400F">
-                    <p>i5 13400F</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/13th.png" alt="i5 13600K">
-                    <p>i5 13600K</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/13th.png" alt="i5 13600KF">
-                    <p>i5 13600KF</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/14th.png" alt="i5 14400">
-                    <p>i5 14400</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/14th.png" alt="i5 14400F">
-                    <p>i5 14400F</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/14th.png" alt="i5 14600K">
-                    <p>i5 14600K</p></div>
-                <div class="grid-item" data-cpu="i5">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i5/14th.png" alt="i5 14600KF">
-                    <p>i5 14600KF</p></div>
-                
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-11400.png" alt="Intel Core i5-11400">
+                    <p>Intel Core i5-11400</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-11400f.png" alt="Intel Core i5-11400F">
+                    <p>Intel Core i5-11400F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-11600k.png" alt="Intel Core i5-11600K">
+                    <p>Intel Core i5-11600K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-11600kf.png" alt="Intel Core i5-11600KF">
+                    <p>Intel Core i5-11600KF</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-12400.png" alt="Intel Core i5-12400">
+                    <p>Intel Core i5-12400</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-12400f.png" alt="Intel Core i5-12400F">
+                    <p>Intel Core i5-12400F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-12600k.png" alt="Intel Core i5-12600K">
+                    <p>Intel Core i5-12600K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-12600kf.png" alt="Intel Core i5-12600KF">
+                    <p>Intel Core i5-12600KF</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-13400.png" alt="Intel Core i5-13400">
+                    <p>Intel Core i5-13400</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-13400f.png" alt="Intel Core i5-13400F">
+                    <p>Intel Core i5-13400F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-13600k.png" alt="Intel Core i5-13600K">
+                    <p>Intel Core i5-13600K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-13600kf.png" alt="Intel Core i5-13600KF">
+                    <p>Intel Core i5-13600KF</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-14400.png" alt="Intel Core i5-14400">
+                    <p>Intel Core i5-14400</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-14400f.png" alt="Intel Core i5-14400F">
+                    <p>Intel Core i5-14400F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-14600k.png" alt="Intel Core i5-14600K">
+                    <p>Intel Core i5-14600K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i5">
+                    <img src="../../../assets/cpu/intel/i5/i5-14600kf.png" alt="Intel Core i5-14600KF">
+                    <p>Intel Core i5-14600KF</p>
+                </div>
                 <!-- Core i7 Items -->
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/11th.png" alt="i7 11700">
-                    <p>i7 11700</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/11th.png" alt="i7 11700F">
-                    <p>i7 11700F</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/11th.png" alt="i7 11700K">
-                    <p>i7 11700K</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/11th.png" alt="i7 11700KF">
-                    <p>i7 11700KF</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/12th.png" alt="i7 12700">
-                    <p>i7 12700</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/12th.png" alt="i7 12700F">
-                    <p>i7 12700F</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/12th.png" alt="i7 12700K">
-                    <p>i7 12700K</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/12th.png" alt="i7 12700KF">
-                    <p>i7 12700KF</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/13th.png" alt="i7 13700">
-                    <p>i7 13700</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/13th.png" alt="i7 13700F">
-                    <p>i7 13700F</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/13th.png" alt="i7 13700K">
-                    <p>i7 13700K</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/13th.png" alt="i7 13700KF">
-                    <p>i7 13700KF</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/14th.png" alt="i7 14700">
-                    <p>i7 14700</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/14th.png" alt="i7 14700F">
-                    <p>i7 14700F</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/14th.png" alt="i7 14700K">
-                    <p>i7 14700K</p></div>
-                <div class="grid-item" data-cpu="i7">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i7/14th.png" alt="i7 14700KF">
-                    <p>i7 14700KF</p></div>
-                
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-11700.png" alt="Intel Core i7-11700">
+                    <p>Intel Core i7-11700</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-11700f.png" alt="Intel Core i7-11700F">
+                    <p>Intel Core i7-11700F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-11700k.png" alt="Intel Core i7-11700K">
+                    <p>Intel Core i7-11700K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-11700kf.png" alt="Intel Core i7-11700KF">
+                    <p>Intel Core i7-11700KF</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-12700.png" alt="Intel Core i7-12700">
+                    <p>Intel Core i7-12700</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-12700f.png" alt="Intel Core i7-12700F">
+                    <p>Intel Core i7-12700F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-12700k.png" alt="Intel Core i7-12700K">
+                    <p>Intel Core i7-12700K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-12700kf.png" alt="Intel Core i7-12700KF">
+                    <p>Intel Core i7-12700KF</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-13700.png" alt="Intel Core i7-13700">
+                    <p>Intel Core i7-13700</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-13700f.png" alt="Intel Core i7-13700F">
+                    <p>Intel Core i7-13700F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-13700k.png" alt="Intel Core i7-13700K">
+                    <p>Intel Core i7-13700K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-13700kf.png" alt="Intel Core i7-13700KF">
+                    <p>Intel Core i7-13700KF</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-14700.png" alt="Intel Core i7-14700">
+                    <p>Intel Core i7-14700</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-14700f.png" alt="Intel Core i7-14700F">
+                    <p>Intel Core i7-14700F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-14700k.png" alt="Intel Core i7-14700K">
+                    <p>Intel Core i7-14700K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i7">
+                    <img src="../../../assets/cpu/intel/i7/i7-14700kf.png" alt="Intel Core i7-14700KF">
+                    <p>Intel Core i7-14700KF</p>
+                </div>
                 <!-- Core i9 Items -->
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/11th.png" alt="i9 11900">
-                    <p>i9 11900</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/11th.png" alt="i9 11900F">
-                    <p>i9 11900F</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/11th.png" alt="i9 11900K">
-                    <p>i9 11900K</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/11th.png" alt="i9 11900KF">
-                    <p>i9 12900KF</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/12th.png" alt="i9 12900">
-                    <p>i9 12900</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/12th.png" alt="i9 12900F">
-                    <p>i9 12900F</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/12th.png" alt="i9 12900K">
-                    <p>i9 12900K</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/12th.png" alt="i9 12900KF">
-                    <p>i9 12900KF</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/13th.png" alt="i9 13900">
-                    <p>i9 13900</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/13th.png" alt="i9 13900K">
-                    <p>i9 13900K</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/13th.png" alt="i9 13900KS">
-                    <p>i9 13900KS</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/13th.png" alt="i9 13900KF">
-                    <p>i9 13900KF</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/14th.png" alt="i9 14900">
-                    <p>i9 14900</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/14th.png" alt="i9 14900F">
-                    <p>i9 14900F</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/14th.png" alt="i9 14900K">
-                    <p>i9 14900K</p></div>
-                <div class="grid-item" data-cpu="i9">
-                    <img src="../../../assets/cpu/cpu-intel/intel-i9/14th.png" alt="i9 14900KF">
-                    <p>i9 14900KF</p></div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-11900.png" alt="Intel Core i9-11900">
+                    <p>Intel Core i9-11900</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-11900f.png" alt="Intel Core i9-11900F">
+                    <p>Intel Core i9-11900F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-11900k.png" alt="Intel Core i9-11900K">
+                    <p>Intel Core i9-11900K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-12900kf.png" alt="Intel Core i9-12900KF">
+                    <p>Intel Core i9-12900KF</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-12900.png" alt="Intel Core i9-12900">
+                    <p>Intel Core i9-12900</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-12900f.png" alt="Intel Core i9-12900F">
+                    <p>Intel Core i9-12900F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-12900k.png" alt="Intel Core i9-12900K">
+                    <p>Intel Core i9-12900K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-12900kf.png" alt="Intel Core i9-12900KF">
+                    <p>Intel Core i9-12900KF</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-13900.png" alt="Intel Core i9-13900">
+                    <p>Intel Core i9-13900</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-13900k.png" alt="Intel Core i9-13900K">
+                    <p>Intel Core i9-13900K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-13900ks.png" alt="Intel Core i9-13900KS">
+                    <p>Intel Core i9-13900KS</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-13900kf.png" alt="Intel Core i9-13900KF">
+                    <p>Intel Core i9-13900KF</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-14900.png" alt="Intel Core i9-14900">
+                    <p>Intel Core i9-14900</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-14900f.png" alt="Intel Core i9-14900F">
+                    <p>Intel Core i9-14900F</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-14900k.png" alt="Intel Core i9-14900K">
+                    <p>Intel Core i9-14900K</p>
+                </div>
+                <div class="intel-grid-item" data-series="i9">
+                    <img src="../../../assets/cpu/intel/i9/i9-14900kf.png" alt="Intel Core i9-14900KF">
+                    <p>Intel Core i9-14900KF</p>
+                </div>
             </div>
         </div>
     </div>
     <div id="bottom-nav"></div>
     <script>
-        document.querySelectorAll('input[name="cpu"]').forEach(radio => {
+        // Filtering logic for Intel series
+        document.querySelectorAll('input[name="intel-series"]').forEach(radio => {
             radio.addEventListener('change', () => {
-                const selectedValue = document.querySelector('input[name="cpu"]:checked').value;
-                document.querySelectorAll('.grid-item').forEach(item => {
-                    item.style.display = item.getAttribute('data-cpu') === selectedValue ? 'block' : 'none';
+                const selectedValue = document.querySelector('input[name="intel-series"]:checked').value;
+                document.querySelectorAll('.intel-grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-series') === selectedValue ? 'block' : 'none';
                 });
             });
         });
 
-        // Get the query parameter from the URL
-        const params = new URLSearchParams(window.location.search);
-        const selectedCpu = params.get('cpu');
-
-        // Set the corresponding radio button as checked
-        if (selectedCpu) {
-            const radio = document.getElementById(selectedCpu);
-            if (radio) {
-                radio.checked = true;
-                // Trigger the change event to update the content visibility
-                radio.dispatchEvent(new Event('change'));
+        // On load, show only checked series and handle ?cpu= query param
+        window.addEventListener('DOMContentLoaded', () => {
+            // Check for ?cpu= in URL
+            const params = new URLSearchParams(window.location.search);
+            const cpu = params.get('cpu');
+            if (cpu && ['i3','i5','i7','i9'].includes(cpu)) {
+                const radio = document.getElementById(cpu + '-series');
+                if (radio) {
+                    radio.checked = true;
+                }
             }
-        }
+            const checked = document.querySelector('input[name="intel-series"]:checked');
+            if (checked) checked.dispatchEvent(new Event('change'));
+        });
     </script>
 </body>
 </html>

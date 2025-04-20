@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AMD Motherboard List</title>
+    <link rel="stylesheet" href="../../../styles/index.css">
+    <link rel="stylesheet" href="../../../styles/motherboard/amd-css/amd-list.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="mobo-page-title">
+        <h1>AMD MOTHERBOARD LIST</h1>
+    </div>
+    <div class="mobo-landing-page">
+        <div class="mobo-topbar">
+            <div class="mobo-series-group">
+                <input type="radio" name="mobo-series" value="a" id="a-series" class="mobo-series-radio" checked>
+                <label for="a-series" class="mobo-series-label">a-series</label>
+                <input type="radio" name="mobo-series" value="b" id="b-series" class="mobo-series-radio">
+                <label for="b-series" class="mobo-series-label">b-series</label>
+                <input type="radio" name="mobo-series" value="x" id="x-series" class="mobo-series-radio">
+                <label for="x-series" class="mobo-series-label">x-series</label>
+            </div>
+            <a href="../intel-mobo/intel-list.html" class="mobo-intel-link">
+                Intel List
+            </a>
+        </div>
+        <div class="mobo-scrollable-content">
+            <div class="mobo-grid-container">
+                <!-- a-series Items -->
+                <div class="mobo-grid-item" data-series="a">
+                    <img src="../../../assets/mobo/amd/a-series/a1.png" alt="A-Series Mobo 1">
+                    <p>A-Series Mobo 1</p>
+                </div>
+                <div class="mobo-grid-item" data-series="a">
+                    <img src="../../../assets/mobo/amd/a-series/a2.png" alt="A-Series Mobo 2">
+                    <p>A-Series Mobo 2</p>
+                </div>
+                <!-- b-series Items -->
+                <div class="mobo-grid-item" data-series="b">
+                    <img src="../../../assets/mobo/amd/b-series/b1.png" alt="B-Series Mobo 1">
+                    <p>B-Series Mobo 1</p>
+                </div>
+                <div class="mobo-grid-item" data-series="b">
+                    <img src="../../../assets/mobo/amd/b-series/b2.png" alt="B-Series Mobo 2">
+                    <p>B-Series Mobo 2</p>
+                </div>
+                <!-- x-series Items -->
+                <div class="mobo-grid-item" data-series="x">
+                    <img src="../../../assets/mobo/amd/x-series/x1.png" alt="X-Series Mobo 1">
+                    <p>X-Series Mobo 1</p>
+                </div>
+                <div class="mobo-grid-item" data-series="x">
+                    <img src="../../../assets/mobo/amd/x-series/x2.png" alt="X-Series Mobo 2">
+                    <p>X-Series Mobo 2</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-nav"></div>
+    <script>
+        // Filtering logic for AMD mobo series
+        document.querySelectorAll('input[name="mobo-series"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedValue = document.querySelector('input[name="mobo-series"]:checked').value;
+                document.querySelectorAll('.mobo-grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-series') === selectedValue ? 'block' : 'none';
+                });
+            });
+        });
+
+        // On load, show only checked series and handle ?series= query param
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const series = params.get('series');
+            if (series && ['a','b','x'].includes(series)) {
+                const radio = document.getElementById(series + '-series');
+                if (radio) {
+                    radio.checked = true;
+                }
+            }
+            const checked = document.querySelector('input[name="mobo-series"]:checked');
+            if (checked) checked.dispatchEvent(new Event('change'));
+        });
+    </script>
+</body>
+</html>

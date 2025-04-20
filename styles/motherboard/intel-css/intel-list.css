@@ -1,103 +1,98 @@
-/* --- Intel Page Title --- */
-.intel-page-title {
+/* --- Intel Mobo Page Title --- */
+.intel-mobo-page-title {
     text-align: center;
     margin: 40px auto 0;
-    background-color: #001F3F;
-    color: #00ADEF;
+    background-color: #1a1a1a;
+    color: #0074A6;
     padding: 20px;
     border-radius: 18px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     width: 30%;
 }
 
-.intel-page-title h1 {
+.intel-mobo-page-title h1 {
     font-size: 2.5em;
     margin: 0;
 }
 
 /* --- Top Bar for Buttons --- */
-.intel-topbar {
+.intel-mobo-topbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 90%;
-    margin: 0 auto; /* Remove bottom margin */
+    margin: 0 auto;
     padding-top: 10px;
-    margin-bottom: 0;    /* Ensure no gap below */
-    padding-bottom: 0;   /* Ensure no gap below */
+    margin-bottom: 0;
+    padding-bottom: 0;
     position: relative;
     z-index: 2;
 }
 
-/* --- Intel Series Buttons (Left) --- */
-.intel-series-group {
+/* --- Intel Mobo Series Buttons (Left) --- */
+.intel-mobo-series-group {
     display: flex;
-    gap: 18px;
+    gap: 14px;
 }
 
-.intel-series-radio {
+.intel-mobo-series-radio {
     display: none;
 }
 
-.intel-series-label {
+.intel-mobo-series-label {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 48px;
-    background-color: #00ADEF;
+    width: 110px;
+    height: 44px;
+    background-color: #0074A6;
     color: #fff;
     font-family: 'Fredoka', sans-serif;
-    font-size: 18px;
-    border-radius: 14px;
+    font-size: 17px;
+    border-radius: 12px;
     cursor: pointer;
     transition: background 0.3s, width 0.3s, color 0.3s;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-.intel-series-label:hover {
-    background-color: #0074A6;
+.intel-mobo-series-label:hover {
+    background-color: #fff;
+    color: #0074A6;
 }
 
-.intel-series-radio:checked + .intel-series-label {
-    width: 170px;
-    background-color: #001F3F;
-    color: #00ADEF;
-    border-radius: 14px 14px 0 0;
+.intel-mobo-series-radio:checked + .intel-mobo-series-label {
+    width: 150px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 12px 12px 0 0;
 }
 
-/* --- AMD Button (Top Right) --- */
+/* --- AMD List Button (Top Right) --- */
 .intel-amd-link {
-    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 120px;
-    height: 48px;
-    background-color: #ED1C24;
+    height: 44px;
+    background: #ED1C24;
     color: #fff;
     font-family: 'Fredoka', sans-serif;
-    font-size: 18px;
-    border-radius: 14px;
-    cursor: pointer;
+    font-size: 17px;
+    border-radius: 12px;
     text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    animation: amd-pulse 1.2s infinite alternate;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     transition: background 0.3s;
+    margin-left: 20px;
 }
-
 .intel-amd-link:hover {
-    background-color: #b31217;
-}
-
-@keyframes amd-pulse {
-    0% { box-shadow: 0 0 0 0 #ED1C2440; }
-    100% { box-shadow: 0 0 16px 8px #ED1C2420; }
+    background: #a31318;
 }
 
 /* --- Layout --- */
-.intel-landing-page {
+.intel-mobo-landing-page {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -106,56 +101,56 @@
 }
 
 /* --- Scrollable Content --- */
-.intel-scrollable-content {
+.intel-mobo-scrollable-content {
     flex: 1;
     width: 90%;
-    margin: 0 auto 285px auto;
-height: calc(100vh - 180px);
-overflow-y: auto;
-    padding: 0 20px 20px 20px; /* Remove top padding */
-    scrollbar-width: none; /* Firefox */
+    margin: 0 auto;
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+    padding: 0 20px 20px 20px;
+    scrollbar-width: none;
     -ms-overflow-style: none;
     opacity: 0.95;
-    }
-.intel-scrollable-content::-webkit-scrollbar {
+}
+.intel-mobo-scrollable-content::-webkit-scrollbar {
     display: none;
 }
 
 /* --- Grid Container --- */
-.intel-grid-container {
+.intel-mobo-grid-container {
     min-height: 600px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     justify-items: center;
     align-items: center;
-    background-color: #001F3F;
+    background-color: #1a1a1a;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
     overflow-x: auto;
     opacity: 0.95;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
     -ms-overflow-style: none;
 }
-.intel-grid-container::-webkit-scrollbar {
+.intel-mobo-grid-container::-webkit-scrollbar {
     display: none;
 }
 
 /* --- Grid Item --- */
-.intel-grid-item {
+.intel-mobo-grid-item {
     width: 220px;
     height: 240px;
-    background-color: rgba(0, 31, 63, 0.8);
+    background-color: rgba(26, 26, 26, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #00ADEF;
+    border: 1px solid #0074A6;
     color: #fff;
     text-align: center;
 }
 
-.intel-grid-item img {
+.intel-mobo-grid-item img {
     width: 180px;
     height: 180px;
     object-fit: contain;
@@ -164,7 +159,7 @@ overflow-y: auto;
     opacity: 1.0;
 }
 
-.intel-grid-item p {
+.intel-mobo-grid-item p {
     text-align: center;
     font-size: 1.1em;
     margin: 0;
