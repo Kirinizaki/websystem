@@ -172,3 +172,8 @@
     margin: 0;
     font-family: 'Fredoka', sans-serif;
 }
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
