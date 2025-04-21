@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NVIDIA GRAPHICS CARD List</title>
+    <link rel="stylesheet" href="../../../styles/index.css">
+    <link rel="stylesheet" href="../../../styles/gpu/nvidia/nvidia-list.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="nvidia-page-title">
+        <h1>NVIDIA GRAPHICS CARD LIST</h1>
+    </div>
+    <div class="nvidia-landing-page">
+        <div class="nvidia-topbar">
+            <div class="nvidia-series-group">
+                <input type="radio" name="nvidia-series" value="20" id="20-series" class="nvidia-series-radio" checked>
+                <label for="20-series" class="nvidia-series-label">20 Series</label>
+                <input type="radio" name="nvidia-series" value="30" id="30-series" class="nvidia-series-radio">
+                <label for="30-series" class="nvidia-series-label">30 Series</label>
+                <input type="radio" name="nvidia-series" value="40" id="40-series" class="nvidia-series-radio">
+                <label for="40-series" class="nvidia-series-label">40 Series</label>
+            </div>
+            <a href="../amd-gpu/amd-gpu-list.html" class="nvidia-amd-link">AMD</a>
+            <a href="../intel-gpu/intel-gpu-list.html" class="nvidia-intel-link">Intel</a>
+        </div>
+        <div class="nvidia-scrollable-content">
+            <div class="nvidia-grid-container">
+                <!-- 20-series Items -->
+                <div class="nvidia-grid-item" data-series="20">
+                    <img src="../../../assets/mobo/nvidia/20-series/h1.png" alt="20-Series">
+                    <p></p>
+                </div>
+                <div class="nvidia-grid-item" data-series="20">
+                    <img src="../../../assets/mobo/nvidia/20-series/h2.png" alt="20-Series">
+                    <p></p>
+                </div>
+                <!-- 30-series Items -->
+                <div class="nvidia-grid-item" data-series="30">
+                    <img src="../../../assets/mobo/nvidia/30-series/b1.png" alt="30-Series">
+                    <p></p>
+                </div>
+                <div class="nvidia-grid-item" data-series="30">
+                    <img src="../../../assets/mobo/nvidia/30-series/b2.png" alt="30-Series">
+                    <p></p>
+                </div>
+                <!-- 40-series Items -->
+                <div class="nvidia-grid-item" data-series="40">
+                    <img src="../../../assets/mobo/nvidia/40-series/z1.png" alt="40-Series">
+                    <p></p>
+                </div>
+                <div class="nvidia-grid-item" data-series="40">
+                    <img src="../../../assets/mobo/nvidia/40-series/z2.png" alt="40-Series">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-nav"></div>
+    <script>
+        // Filtering logic for Intel mobo series
+        document.querySelectorAll('input[name="nvidia-series"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedValue = document.querySelector('input[name="nvidia-series"]:checked').value;
+                document.querySelectorAll('.nvidia-grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-series') === selectedValue ? 'block' : 'none';
+                });
+            });
+        });
+
+        // On load, show only checked series and handle ?series= query param
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const series = params.get('series');
+            if (series && ['20','30','40'].includes(series)) {
+                const radio = document.getElementById(series + '-series');
+                if (radio) {
+                    radio.checked = true;
+                }
+            }
+            const checked = document.querySelector('input[name="nvidia-series"]:checked');
+            if (checked) checked.dispatchEvent(new Event('change'));
+        });
+    </script>
+</body>
+</html>
