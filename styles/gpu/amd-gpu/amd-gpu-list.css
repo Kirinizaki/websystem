@@ -1,0 +1,203 @@
+.amd-gpu-page-title {
+    text-align: center;
+    margin: 40px auto 0;
+    background-color: #1a1a1a;
+    color: #ED1C24;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 30%;
+}
+
+.amd-gpu-page-title h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* --- Top Bar for Buttons --- */
+.amd-gpu-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 92%;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Intel Mobo Series Buttons (Left) --- */
+.amd-gpu-series-group {
+    display: flex;
+    gap: 18px;
+    margin-left: 19px; /* Add left margin for spacing */
+}
+
+.amd-gpu-series-radio {
+    display: none;
+}
+
+.amd-gpu-series-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 48px;
+    background-color: #ED1C24;
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s, color 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.amd-gpu-series-label:hover {
+    background-color: #fff;
+    color: #ED1C24;
+}
+
+.amd-gpu-series-radio:checked + .amd-gpu-series-label {
+    width: 170px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 14px 14px 0 0;
+}
+
+.amd-nvidia-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 48px;
+    background-color: #76B900;
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    animation: nvidia-pulse 1.2s infinite alternate;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+    margin-left: 1000px;
+}
+
+.amd-nvidia-link:hover {
+    background-color: #76B900;
+}
+
+@keyframes nvidia-pulse {
+    0% { box-shadow: 0 0 0 0 #76B90040; }
+    100% { box-shadow: 0 0 16px 8px #76B90020; } 
+}
+
+/* --- AMD List Button (Top Right) --- */
+.amd-intel-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 48px;
+    background-color: #0074D9;
+    color: #fff;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    border-radius: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    animation: intel-pulse 1.2s infinite alternate;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+}
+
+.amd-intel-link:hover {
+    background-color: #0074D9;
+}
+
+@keyframes intel-pulse {
+    0% { box-shadow: 0 0 0 0 #00ADEF40; }
+    100% { box-shadow: 0 0 16px 8px #00ADEF20; }
+}
+
+/* --- Layout --- */
+.amd-gpu-landing-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+/* --- Scrollable Content --- */
+.amd-gpu-scrollable-content {
+    flex: 1;
+    width: 90%;
+    margin: 0 auto 258px auto;
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+    padding: 0 20px 20px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    opacity: 0.95;
+}
+.amd-gpu-scrollable-content::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- Grid Container --- */
+.amd-gpu-grid-container {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: auto;
+    opacity: 0.95;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.amd-gpu-grid-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- Grid Item --- */
+.amd-gpu-grid-item {
+    width: 220px;
+    height: 240px;
+    background-color: rgba(26, 26, 26, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #ED1C24;
+    color: #fff;
+    text-align: center;
+}
+
+.amd-gpu-grid-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin: 10px auto;
+    display: block;
+    opacity: 1.0;
+}
+
+.amd-gpu-grid-item p {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+}/* Empty file for AMD GPU styles */

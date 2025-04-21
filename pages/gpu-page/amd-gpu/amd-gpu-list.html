@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AMD GRAPHICS CARD List</title>
+    <link rel="stylesheet" href="../../../styles/index.css">
+    <link rel="stylesheet" href="../../../styles/gpu/amd-gpu/amd-gpu-list.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="amd-gpu-page-title">
+        <h1>AMD GRAPHICS CARD LIST</h1>
+    </div>
+    <div class="amd-gpu-landing-page">
+        <div class="amd-gpu-topbar">
+            <div class="amd-gpu-series-group">
+                <input type="radio" name="amd-gpu-series" value="5000" id="5000-series" class="amd-gpu-series-radio" checked>
+                <label for="5000-series" class="amd-gpu-series-label">5000 Series</label>
+                <input type="radio" name="amd-gpu-series" value="6000" id="6000-series" class="amd-gpu-series-radio">
+                <label for="6000-series" class="amd-gpu-series-label">6000 Series</label>
+                <input type="radio" name="amd-gpu-series" value="7000" id="7000-series" class="amd-gpu-series-radio">
+                <label for="7000-series" class="amd-gpu-series-label">7000 Series</label>
+            </div>
+            <a href="../nvidia/nvidia-list.html" class="amd-nvidia-link">Nvidia</a>
+            <a href="../intel-gpu/intel-gpu-list.html" class="amd-intel-link">Intel</a>
+        </div>
+        <div class="amd-gpu-scrollable-content">
+            <div class="amd-gpu-grid-container">
+                <!-- 5000-series Items -->
+                <div class="amd-gpu-grid-item" data-series="5000">
+                    <img src="../../../assets/mobo/amd-gpu/5000-series/h1.png" alt="5000-Series">
+                    <p></p>
+                </div>
+                <div class="amd-gpu-grid-item" data-series="5000">
+                    <img src="../../../assets/mobo/amd-gpu/5000-series/h2.png" alt="5000-Series">
+                    <p></p>
+                </div>
+                <!-- 6000-series Items -->
+                <div class="amd-gpu-grid-item" data-series="6000">
+                    <img src="../../../assets/mobo/amd-gpu/6000-series/b1.png" alt="6000-Series">
+                    <p></p>
+                </div>
+                <div class="amd-gpu-grid-item" data-series="6000">
+                    <img src="../../../assets/mobo/amd-gpu/6000-series/b2.png" alt="6000-Series">
+                    <p></p>
+                </div>
+                <!-- 7000-series Items -->
+                <div class="amd-gpu-grid-item" data-series="7000">
+                    <img src="../../../assets/mobo/amd-gpu/7000-series/z1.png" alt="7000-Series">
+                    <p></p>
+                </div>
+                <div class="amd-gpu-grid-item" data-series="7000">
+                    <img src="../../../assets/mobo/amd-gpu/7000-series/z2.png" alt="7000-Series">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom-nav"></div>
+    <script>
+        // Filtering logic for Intel mobo series
+        document.querySelectorAll('input[name="amd-gpu-series"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const selectedValue = document.querySelector('input[name="amd-gpu-series"]:checked').value;
+                document.querySelectorAll('.amd-gpu-grid-item').forEach(item => {
+                    item.style.display = item.getAttribute('data-series') === selectedValue ? 'block' : 'none';
+                });
+            });
+        });
+
+        // On load, show only checked series and handle ?series= query param
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const series = params.get('series');
+            if (series && ['5000','6000','7000'].includes(series)) {
+                const radio = document.getElementById(series + '-series');
+                if (radio) {
+                    radio.checked = true;
+                }
+            }
+            const checked = document.querySelector('input[name="amd-gpu-series"]:checked');
+            if (checked) checked.dispatchEvent(new Event('change'));
+        });
+    </script>
+</body>
+</html>
