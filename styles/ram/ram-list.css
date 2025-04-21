@@ -44,7 +44,7 @@
     align-items: center;
     justify-content: center;
     width: 120px;
-    height: 48px;
+    height: 50px;
     background-color: #7C4DFF;
     color: #fff;
     font-family: 'Fredoka', sans-serif;
@@ -140,4 +140,8 @@
     font-size: 1.1em;
     margin: 0;
     font-family: 'Fredoka', sans-serif;
+}
+
+a {
+    color: #fff;
 }
