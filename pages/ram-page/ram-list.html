@@ -158,8 +158,17 @@
             });
         });
 
-        // On load, show only checked type
+        // On load, show only checked RAM type and handle ?ram= query param
         window.addEventListener('DOMContentLoaded', () => {
+            // Check for ?ram= in URL
+            const params = new URLSearchParams(window.location.search);
+            const ram = params.get('ram');
+            if (ram && ['ddr4', 'ddr5'].includes(ram)) {
+                const radio = document.getElementById(ram + '-type');
+                if (radio) {
+                    radio.checked = true;
+                }
+            }
             const checked = document.querySelector('input[name="ram-type"]:checked');
             if (checked) checked.dispatchEvent(new Event('change'));
         });
