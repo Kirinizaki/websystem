@@ -69,7 +69,6 @@ img {
 #image-container img {
     width: 700px; 
     height: 1000; 
-   
     object-fit: contain; 
 }
 
