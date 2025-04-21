@@ -43,7 +43,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    width: 120px;
     height: 48px;
     background-color: #FF9800;
     color: #fff;
@@ -60,7 +60,7 @@
 }
 
 .psu-type-radio:checked + .psu-type-label {
-    width: 200px;
+    width: 170px;
     background-color: #222;
     color: #FF9800;
     border-radius: 14px 14px 0 0;
@@ -79,15 +79,13 @@
 .psu-scrollable-content {
     flex: 1;
     width: 90%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 258px auto; /* Adjusted bottom margin for AMD button */
     height: calc(100vh - 180px);
     overflow-y: auto;
-    padding: 20px;
-    padding-top: 0;
-    margin-top: 0;
-    padding-bottom: 60px;
+    padding: 0 20px 20px 20px; /* Remove top padding */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;
+    opacity: 0.95;
 }
 .psu-scrollable-content::-webkit-scrollbar {
     display: none;

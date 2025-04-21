@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 90%;
+    width: 92%;
     margin: 0 auto;
     padding-top: 10px;
     margin-bottom: 0;
@@ -33,6 +33,7 @@
 .mobo-series-group {
     display: flex;
     gap: 18px;
+    margin-left: 19px; /* Add left margin for spacing */
 }
 
 .mobo-series-radio {
@@ -68,27 +69,33 @@
 }
 
 /* --- Intel List Button (Top Right) --- */
-.mobo-intel-link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: inline-flex;
+.ryzen-intel-link {
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 120px;
     height: 48px;
-    background: #0074A6;
+    background-color: #00ADEF;
     color: #fff;
     font-family: 'Fredoka', sans-serif;
     font-size: 18px;
     border-radius: 14px;
+    cursor: pointer;
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    animation: intel-pulse 1.2s infinite alternate;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     transition: background 0.3s;
-    margin-left: 20px;
 }
-.mobo-intel-link:hover {
-    background: #005c87;
+
+.ryzen-intel-link:hover {
+    background-color: #0074A6;
+}
+
+@keyframes intel-pulse {
+    0% { box-shadow: 0 0 0 0 #00ADEF40; }
+    100% { box-shadow: 0 0 16px 8px #00ADEF20; }
 }
 
 /* --- Layout --- */
@@ -104,7 +111,7 @@
 .mobo-scrollable-content {
     flex: 1;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 258px auto;
     height: calc(100vh - 180px);
     overflow-y: auto;
     padding: 0 20px 20px 20px;
