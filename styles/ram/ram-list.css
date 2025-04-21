@@ -1,7 +1,7 @@
 /* --- RAM Page Title --- */
 .ram-page-title {
     text-align: center;
-    margin: 24px auto 0; /* Reduced from 40px to 24px */
+    margin: 40px auto 0;
     background-color: #222;
     color: #7C4DFF;
     padding: 20px;
@@ -21,8 +21,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 90%;
-    margin: 25px auto 0 auto; /* Reduced from 40px to 16px */
-    padding-top: 0; /* Remove extra space above buttons */
+    margin: 0 auto;
+    padding-top: 10px;
     position: relative;
     z-index: 2;
     margin-bottom: 0;
@@ -73,21 +73,36 @@
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
-    margin-top: 16px; /* Reduced from 40px to 16px */
+    margin-top: 40px;
+}
+
+/* --- Scrollable Content --- */
+.ram-scrollable-content {
+    flex: 1;
+    width: 90%;
+    margin: 0 auto 0 auto; /* Adjusted bottom margin for AMD button */
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+    padding: 0 20px 20px 20px; /* Remove top padding */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    opacity: 0.95;
+}
+.ram-scrollable-content::-webkit-scrollbar {
+    display: none;
 }
 
 /* --- Grid Container --- */
 .ram-grid-container {
     min-height: 600px;
-    width: 90%; /* Changed from 100% to 90% */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
-    border-radius: 10px;
     justify-items: center;
     align-items: center;
     background-color: #222;
-    margin: 0 auto 280px auto; /* Move container down by 3px */
+    width: 100%;
+    margin: 0 auto;
     padding: 20px;
     overflow-x: auto;
     opacity: 0.95;
