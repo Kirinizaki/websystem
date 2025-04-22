@@ -51,16 +51,17 @@
 }
 
 .brand-logo {
-    margin-bottom: 20px;
+    margin-bottom: 100px; /* Lower the logo further */
     width: 220px;
     height: 60px;
     display: flex;
     align-items: center;
-    margin-left: -10px;
+    margin-left: -10px; 
+    margin-top: 80px; /* Add top margin to push logo down */
 }
 
 .brand-logo img {
-    width: 100%;
+    width: 150%;
     height: auto;
 }
 
@@ -105,5 +106,7 @@ strong {
         width: 140px;
         height: 40px;
         margin-left: 0;
+        margin-top: 15px; /* Lower logo on mobile too */
+        margin-bottom: 20px;
     }
 }
