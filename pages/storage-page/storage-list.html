@@ -163,20 +163,15 @@
             });
         });
 
-        // On load, show only checked type or type from URL
+        // On load, show only checked type and handle ?type= query param
         window.addEventListener('DOMContentLoaded', () => {
+            // Check for ?type= in URL
             const params = new URLSearchParams(window.location.search);
-            const typeParam = params.get('type');
-            let typeValue = null;
-            if (typeParam && ['nvme', 'sata', 'hdd'].includes(typeParam)) {
-                typeValue = typeParam;
-            }
-            if (typeValue) {
-                const radio = document.getElementById(typeValue + '-type');
+            const type = params.get('type');
+            if (type && ['nvme', 'sata', 'hdd'].includes(type)) {
+                const radio = document.getElementById(type + '-type');
                 if (radio) {
                     radio.checked = true;
-                    radio.dispatchEvent(new Event('change'));
-                    return;
                 }
             }
             const checked = document.querySelector('input[name="storage-type"]:checked');
