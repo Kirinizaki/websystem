@@ -38,7 +38,7 @@
 
 .product-image img {
     max-width: 100%;
-    max-height: 620px; /* increased from 400px */
+    max-height: 400px;
     object-fit: contain;
 }
 
